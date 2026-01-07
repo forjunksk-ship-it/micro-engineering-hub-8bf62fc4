@@ -54,7 +54,7 @@ const HomePage = () => {
         <div className="relative z-10 container-custom py-20">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-slide-up">
-              Precision Manufacturing Excellence
+              Custom Metal & Plastic Parts Manufacturing
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed animate-slide-up" style={{ animationDelay: "0.1s" }}>
               Your trusted partner for high-quality CNC machining, VMC operations, stamping, and custom fabrication.
