@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "services": "Dienstleistungen",
+    "solutions": "Lösungen",
+    "gallery": "Galerie",
+    "contact": "Kontakt",
+    "getQuote": "Angebot"
+  },
+  "header": {
+    "tagline": "Fertigung von Metall- und Kunststoffteilen",
+    "companyName": "Micro Engineering",
+    "subtitle": "Präzisionsfertigung"
+  },
+  "hero": {
+    "title": "Präzisions-Engineering-Lösungen",
+    "subtitle": "Ihr vertrauenswürdiger Partner für hochwertige CNC-Bearbeitung, VMC-Operationen, Stanzen und kundenspezifische Fertigung",
+    "cta": "Loslegen",
+    "learnMore": "Mehr erfahren"
+  },
+  "services": {
+    "title": "Unsere Dienstleistungen",
+    "subtitle": "Umfassende Fertigungslösungen"
+  },
+  "about": {
+    "title": "Über uns",
+    "subtitle": "Über 25 Jahre Fertigungsexzellenz"
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Nehmen Sie Kontakt mit uns auf",
+    "name": "Name",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "message": "Nachricht",
+    "send": "Nachricht senden"
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen"
+  }
+}

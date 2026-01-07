@@ -1,21 +1,24 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Services", path: "/services" },
-  { name: "Solutions", path: "/solutions" },
-  { name: "Gallery", path: "/gallery" },
-  { name: "Contact", path: "/contact" },
+  { name: "nav.home", path: "/" },
+  { name: "nav.about", path: "/about" },
+  { name: "nav.services", path: "/services" },
+  { name: "nav.solutions", path: "/solutions" },
+  { name: "nav.gallery", path: "/gallery" },
+  { name: "nav.contact", path: "/contact" },
 ];
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -35,7 +38,7 @@ const Header = () => {
             </a>
           </div>
           <div className="text-primary-foreground/80">
-            Custom Metal & Plastic Parts Manufacturing
+            {t('header.tagline')}
           </div>
         </div>
       </div>
@@ -47,8 +50,8 @@ const Header = () => {
           <Link to="/" className="flex items-center gap-2 md:gap-3">
             <img src={logo} alt="Micro Engineering Logo" className="h-8 md:h-10 w-auto" />
             <div>
-              <h1 className="text-sm md:text-lg font-bold text-foreground leading-tight">Micro Engineering</h1>
-              <p className="text-[9px] md:text-xs text-muted-foreground">Precision Manufacturing</p>
+              <h1 className="text-sm md:text-lg font-bold text-foreground leading-tight">{t('header.companyName')}</h1>
+              <p className="text-[9px] md:text-xs text-muted-foreground">{t('header.subtitle')}</p>
             </div>
           </Link>
 
@@ -64,26 +67,30 @@ const Header = () => {
                     : "text-foreground hover:bg-secondary hover:text-foreground"
                 }`}
               >
-                {link.name}
+                {t(link.name)}
               </Link>
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center gap-4">
+          {/* CTA Button & Language Switcher */}
+          <div className="hidden lg:flex items-center gap-2">
+            <LanguageSwitcher />
             <Button asChild variant="cta" size="sm">
-              <Link to="/contact">Get Quote</Link>
+              <Link to="/contact">{t('nav.getQuote')}</Link>
             </Button>
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            className="lg:hidden p-1.5 rounded-md hover:bg-secondary"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
+          {/* Mobile Language & Menu */}
+          <div className="lg:hidden flex items-center gap-1">
+            <LanguageSwitcher />
+            <button
+              className="p-1.5 rounded-md hover:bg-secondary"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -101,11 +108,11 @@ const Header = () => {
                       : "text-foreground hover:bg-secondary"
                   }`}
                 >
-                  {link.name}
+                  {t(link.name)}
                 </Link>
               ))}
               <Button asChild variant="cta" size="sm" className="mt-2">
-                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Get Quote</Link>
+                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>{t('nav.getQuote')}</Link>
               </Button>
             </div>
           </div>

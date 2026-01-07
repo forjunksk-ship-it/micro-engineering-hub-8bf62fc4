@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Chi siamo",
+    "services": "Servizi",
+    "solutions": "Soluzioni",
+    "gallery": "Galleria",
+    "contact": "Contatti",
+    "getQuote": "Preventivo"
+  },
+  "header": {
+    "tagline": "Produzione di Parti in Metallo e Plastica",
+    "companyName": "Micro Engineering",
+    "subtitle": "Produzione di Precisione"
+  },
+  "hero": {
+    "title": "Soluzioni di Ingegneria di Precisione",
+    "subtitle": "Il vostro partner di fiducia per lavorazioni CNC, operazioni VMC, stampaggio e fabbricazione personalizzata",
+    "cta": "Inizia",
+    "learnMore": "Scopri di più"
+  },
+  "services": {
+    "title": "I Nostri Servizi",
+    "subtitle": "Soluzioni di produzione complete"
+  },
+  "about": {
+    "title": "Chi Siamo",
+    "subtitle": "Oltre 25 anni di eccellenza nella produzione"
+  },
+  "contact": {
+    "title": "Contattaci",
+    "subtitle": "Mettiti in contatto con noi",
+    "name": "Nome",
+    "email": "Email",
+    "phone": "Telefono",
+    "message": "Messaggio",
+    "send": "Invia Messaggio"
+  },
+  "footer": {
+    "rights": "Tutti i diritti riservati",
+    "privacy": "Privacy Policy",
+    "terms": "Termini di Servizio"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "about": "会社概要",
+    "services": "サービス",
+    "solutions": "ソリューション",
+    "gallery": "ギャラリー",
+    "contact": "お問い合わせ",
+    "getQuote": "見積もり依頼"
+  },
+  "header": {
+    "tagline": "カスタム金属・プラスチック部品製造",
+    "companyName": "マイクロエンジニアリング",
+    "subtitle": "精密製造"
+  },
+  "hero": {
+    "title": "精密エンジニアリングソリューション",
+    "subtitle": "高品質なCNC加工、VMC加工、スタンピング、カスタム製造の信頼できるパートナー",
+    "cta": "始める",
+    "learnMore": "詳細を見る"
+  },
+  "services": {
+    "title": "サービス",
+    "subtitle": "総合的な製造ソリューション"
+  },
+  "about": {
+    "title": "会社概要",
+    "subtitle": "25年以上の製造実績"
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "subtitle": "お気軽にご連絡ください",
+    "name": "お名前",
+    "email": "メール",
+    "phone": "電話番号",
+    "message": "メッセージ",
+    "send": "送信"
+  },
+  "footer": {
+    "rights": "全著作権所有",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約"
+  }
+}
