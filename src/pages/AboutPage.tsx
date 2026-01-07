@@ -173,24 +173,24 @@ const AboutPage = () => {
       </section>
 
       {/* Milestones */}
-      <section className="section-padding bg-industrial-dark text-primary-foreground">
+      <section className="section-padding bg-secondary">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Journey</h2>
-            <p className="text-primary-foreground/80 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Journey</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
               Key milestones in our path to becoming a trusted manufacturing partner.
             </p>
           </div>
           <div className="grid md:grid-cols-4 gap-6">
             {milestones.map((milestone, index) => (
               <div key={index} className="relative">
-                <div className="bg-primary-foreground/10 rounded-lg p-6 text-center">
-                  <div className="text-accent font-mono font-bold mb-2">{milestone.year}</div>
-                  <h3 className="text-lg font-semibold mb-2">{milestone.title}</h3>
-                  <p className="text-sm text-primary-foreground/70">{milestone.description}</p>
+                <div className="bg-card border border-border rounded-lg p-6 text-center">
+                  <div className="text-primary font-mono font-bold mb-2">{milestone.year}</div>
+                  <h3 className="text-lg font-semibold text-foreground mb-2">{milestone.title}</h3>
+                  <p className="text-sm text-muted-foreground">{milestone.description}</p>
                 </div>
                 {index < milestones.length - 1 && (
-                  <div className="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-6 h-0.5 bg-accent" />
+                  <div className="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-6 h-0.5 bg-primary" />
                 )}
               </div>
             ))}

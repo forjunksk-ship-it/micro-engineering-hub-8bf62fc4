@@ -149,12 +149,12 @@ const HomePage = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="section-padding bg-industrial-dark text-primary-foreground">
+      <section className="section-padding bg-secondary">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose Micro Engineering?</h2>
-              <p className="text-primary-foreground/80 mb-8 leading-relaxed">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Why Choose Micro Engineering?</h2>
+              <p className="text-muted-foreground mb-8 leading-relaxed">
                 With decades of experience in precision manufacturing, we combine traditional craftsmanship
                 with modern technology to deliver exceptional quality every time.
               </p>
@@ -168,8 +168,8 @@ const HomePage = () => {
                   "Competitive pricing without compromising quality",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-cta mt-0.5 flex-shrink-0" />
-                    <span className="text-primary-foreground/90">{item}</span>
+                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-foreground">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -181,10 +181,10 @@ const HomePage = () => {
                 { icon: Shield, title: "Reliable Partner", desc: "Trusted by leading companies" },
                 { icon: Cog, title: "Advanced Tech", desc: "Latest manufacturing equipment" },
               ].map((item, index) => (
-                <div key={index} className="bg-primary-foreground/10 rounded-lg p-6 text-center">
-                  <item.icon className="h-10 w-10 text-cta mx-auto mb-3" />
-                  <h4 className="font-semibold mb-1">{item.title}</h4>
-                  <p className="text-sm text-primary-foreground/70">{item.desc}</p>
+                <div key={index} className="bg-card border border-border rounded-lg p-6 text-center">
+                  <item.icon className="h-10 w-10 text-primary mx-auto mb-3" />
+                  <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground">{item.desc}</p>
                 </div>
               ))}
             </div>

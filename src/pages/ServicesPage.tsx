@@ -207,7 +207,7 @@ const ServicesPage = () => {
       </section>
 
       {/* Additional Services */}
-      <section className="section-padding bg-industrial-dark text-primary-foreground">
+      <section className="section-padding bg-secondary">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -218,10 +218,10 @@ const ServicesPage = () => {
               />
             </div>
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Additional Services
               </h2>
-              <p className="text-primary-foreground/80 mb-6 leading-relaxed">
+              <p className="text-muted-foreground mb-6 leading-relaxed">
                 Beyond core manufacturing, we offer a range of value-added services to deliver complete solutions for your requirements, through our trusted partners.
               </p>
               <div className="grid grid-cols-2 gap-4">
@@ -234,8 +234,8 @@ const ServicesPage = () => {
                   "Passivation",
                 ].map((service, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-accent flex-shrink-0" />
-                    <span className="text-sm text-primary-foreground/90">{service}</span>
+                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                    <span className="text-sm text-foreground">{service}</span>
                   </div>
                 ))}
               </div>
