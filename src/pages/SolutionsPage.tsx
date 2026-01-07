@@ -137,7 +137,7 @@ const SolutionsPage = () => {
       </section>
 
       {/* Partnership Approach */}
-      <section className="section-padding bg-secondary">
+      <section className="section-padding bg-background">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Partnership Approach</h2>
@@ -151,7 +151,7 @@ const SolutionsPage = () => {
                 { title: "Collaboration", desc: "Work together to find the best manufacturing solutions" },
                 { title: "Support", desc: "Continuous support from prototype to production and beyond" },
               ].map((item, index) => (
-                <div key={index} className="bg-card border border-border rounded-lg p-6">
+                <div key={index} className="bg-secondary border border-border rounded-lg p-6">
                   <h4 className="font-semibold text-lg text-foreground mb-2">{item.title}</h4>
                   <p className="text-sm text-muted-foreground">{item.desc}</p>
                 </div>
