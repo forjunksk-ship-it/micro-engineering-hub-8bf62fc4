@@ -46,26 +46,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="text-sm font-semibold mb-2">Our Services</h4>
-            <ul className="space-y-1">
-              {[
-                "CNC Machining",
-                "VMC Machining",
-                "Stamping",
-                "Fabrication",
-                "Prototype Parts",
-                "Tube Bending",
-                "Custom Assembly",
-              ].map((service) => (
-                <li key={service}>
-                  <span className="text-muted-foreground text-xs">{service}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Contact Info */}
           <div>
             <h4 className="text-sm font-semibold mb-2">Contact Us</h4>
