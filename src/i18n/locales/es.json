@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "solutions": "Soluciones",
+    "gallery": "Galería",
+    "contact": "Contacto",
+    "getQuote": "Cotización"
+  },
+  "header": {
+    "tagline": "Fabricación de Piezas Metálicas y Plásticas",
+    "companyName": "Micro Engineering",
+    "subtitle": "Fabricación de Precisión"
+  },
+  "hero": {
+    "title": "Soluciones de Ingeniería de Precisión",
+    "subtitle": "Su socio de confianza para mecanizado CNC, operaciones VMC, estampado y fabricación personalizada",
+    "cta": "Comenzar",
+    "learnMore": "Más Información"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Soluciones de fabricación integrales"
+  },
+  "about": {
+    "title": "Sobre Nosotros",
+    "subtitle": "Más de 25 años de excelencia en fabricación"
+  },
+  "contact": {
+    "title": "Contáctenos",
+    "subtitle": "Póngase en contacto con nosotros",
+    "name": "Nombre",
+    "email": "Correo",
+    "phone": "Teléfono",
+    "message": "Mensaje",
+    "send": "Enviar Mensaje"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "solutions": "Solutions",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "getQuote": "Get Quote"
+  },
+  "header": {
+    "tagline": "Custom Metal & Plastic Parts Manufacturing",
+    "companyName": "Micro Engineering",
+    "subtitle": "Precision Manufacturing"
+  },
+  "hero": {
+    "title": "Precision Engineering Solutions",
+    "subtitle": "Your trusted partner for high-quality CNC machining, VMC operations, stamping, and custom fabrication",
+    "cta": "Get Started",
+    "learnMore": "Learn More"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive manufacturing solutions"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "25+ years of manufacturing excellence"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with us",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "send": "Send Message"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}
