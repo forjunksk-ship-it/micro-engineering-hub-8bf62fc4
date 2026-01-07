@@ -21,25 +21,6 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      {/* Top bar - hidden on mobile */}
-      <div className="bg-primary text-primary-foreground py-1.5 hidden md:block">
-        <div className="container-custom flex justify-between items-center text-sm">
-          <div className="flex items-center gap-6">
-            <a href="tel:+919999999999" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <Phone className="h-3.5 w-3.5" />
-              <span>+91 99999 99999</span>
-            </a>
-            <a href="mailto:info@microengineering.in" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <Mail className="h-3.5 w-3.5" />
-              <span>info@microengineering.in</span>
-            </a>
-          </div>
-          <div className="text-primary-foreground/80">
-            Custom Metal & Plastic Parts Manufacturing
-          </div>
-        </div>
-      </div>
-
       {/* Main navigation */}
       <nav className="container-custom py-2 md:py-3">
         <div className="flex items-center justify-between">
