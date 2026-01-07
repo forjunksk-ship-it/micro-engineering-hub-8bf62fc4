@@ -53,12 +53,12 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
+                className={`px-2 lg:px-3 py-1.5 rounded-md text-xs lg:text-sm font-medium transition-colors whitespace-nowrap ${
                   isActive(link.path)
                     ? "bg-primary text-primary-foreground"
                     : "text-foreground hover:bg-secondary hover:text-foreground"
@@ -70,7 +70,7 @@ const Header = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-4">
             <Button asChild variant="cta" size="sm">
               <Link to="/contact">Get Quote</Link>
             </Button>
@@ -78,7 +78,7 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-1.5 rounded-md hover:bg-secondary"
+            className="md:hidden p-1.5 rounded-md hover:bg-secondary"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -88,7 +88,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden mt-3 pb-3 border-t border-border pt-3 animate-fade-in">
+          <div className="md:hidden mt-3 pb-3 border-t border-border pt-3 animate-fade-in">
             <div className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 <Link
