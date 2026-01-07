@@ -35,7 +35,7 @@ const Header = () => {
             </a>
           </div>
           <div className="text-primary-foreground/80">
-            Precision Manufacturing Excellence
+            Custom Metal & Plastic Parts Manufacturing
           </div>
         </div>
       </div>
