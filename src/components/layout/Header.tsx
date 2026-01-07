@@ -43,12 +43,12 @@ const Header = () => {
       {/* Main navigation */}
       <nav className="container-custom py-2 md:py-3">
         <div className="flex items-center justify-between">
-          {/* Logo - smaller on mobile, same content */}
-          <Link to="/" className="flex items-center gap-2 md:gap-3">
-            <img src={logo} alt="Micro Engineering Logo" className="h-8 md:h-10 w-auto" />
+          {/* Logo - bigger size */}
+          <Link to="/" className="flex items-center gap-3">
+            <img src={logo} alt="Micro Engineering Logo" className="h-12 md:h-14 w-auto" />
             <div>
-              <h1 className="text-sm md:text-lg font-bold text-foreground leading-tight">Micro Engineering</h1>
-              <p className="text-[9px] md:text-xs text-muted-foreground">Precision Manufacturing</p>
+              <h1 className="text-base md:text-xl font-bold text-foreground leading-tight">Micro Engineering</h1>
+              <p className="text-[10px] md:text-xs text-muted-foreground">Precision Manufacturing</p>
             </div>
           </Link>
 
