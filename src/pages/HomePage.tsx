@@ -23,10 +23,10 @@ const industries = [
   { name: "Automotive", subtitle: "High-performance components", icon: Car, customIcon: null },
   { name: "Medical", subtitle: "Surgical instruments", icon: Heart, customIcon: null },
   { name: "Electronics", subtitle: "Precision connectors", icon: Cpu, customIcon: null },
+  { name: "Machinery", subtitle: "Heavy equipment parts", icon: null, customIcon: iconMachinery },
   { name: "Defense", subtitle: "Military-grade parts", icon: Shield, customIcon: null },
   { name: "Energy", subtitle: "Power generation components", icon: Zap, customIcon: null },
   { name: "Industrial", subtitle: "Manufacturing equipment", icon: Settings, customIcon: null },
-  { name: "Machinery", subtitle: "Heavy equipment parts", icon: null, customIcon: iconMachinery },
 ];
 
 const capabilities = [
