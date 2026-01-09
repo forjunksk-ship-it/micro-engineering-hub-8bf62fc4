@@ -169,7 +169,7 @@ const HomePage = () => {
 
       {/* Our Process Section */}
       <section className="py-8 md:py-10 bg-secondary">
-        <div className="container-custom">
+        <div className="container-custom px-2 sm:px-4 md:px-6">
           <div className="text-center mb-6">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">Our Process</h2>
             <p className="text-muted-foreground text-sm">
@@ -184,15 +184,15 @@ const HomePage = () => {
               { step: "04", title: "Delivery", desc: "On-time delivery to your location" },
             ].map((item, index) => (
               <div key={index} className="flex items-center">
-                <div className="flex flex-col items-center text-center px-1 sm:px-3 md:px-6">
-                  <div className="w-9 h-9 sm:w-11 sm:h-11 md:w-14 md:h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs sm:text-base md:text-xl font-bold mb-1 sm:mb-2">
+                <div className="flex flex-col items-center text-center px-2 sm:px-3 md:px-6">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm sm:text-base md:text-xl font-bold mb-1 sm:mb-2">
                     {item.step}
                   </div>
-                  <h3 className="font-semibold text-foreground text-[10px] sm:text-xs md:text-base">{item.title}</h3>
-                  <p className="text-muted-foreground text-[8px] sm:text-[10px] md:text-sm max-w-[60px] sm:max-w-[100px] md:max-w-[140px]">{item.desc}</p>
+                  <h3 className="font-semibold text-foreground text-xs sm:text-sm md:text-base">{item.title}</h3>
+                  <p className="text-muted-foreground text-[9px] sm:text-xs md:text-sm max-w-[70px] sm:max-w-[110px] md:max-w-[140px]">{item.desc}</p>
                 </div>
                 {index < 3 && (
-                  <div className="w-3 sm:w-6 md:w-12 lg:w-20 h-0.5 sm:h-1 bg-gradient-to-r from-primary/10 via-primary to-primary/10 -mt-6 sm:-mt-8 rounded-full" />
+                  <div className="w-4 sm:w-8 md:w-12 lg:w-20 h-0.5 sm:h-1 bg-gradient-to-r from-primary/10 via-primary to-primary/10 -mt-6 sm:-mt-8 rounded-full" />
                 )}
               </div>
             ))}
