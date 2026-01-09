@@ -52,8 +52,18 @@ const HomePage = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
         <div className="relative z-10 container-custom py-12 md:py-20">
-          <div className="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12">
-            {/* Text Content - Bottom on mobile, Left on desktop */}
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            {/* Image Container - Top on mobile, Left on desktop */}
+            <div className="w-full md:w-2/5 lg:w-1/3 flex-shrink-0 animate-slide-up">
+              <div className="relative rounded-xl overflow-hidden border-2 border-white/20 shadow-2xl">
+                <img 
+                  src={heroImage} 
+                  alt="Precision Manufacturing" 
+                  className="w-full h-48 md:h-64 lg:h-80 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+              </div>
+            </div>
             
             {/* Text Content */}
             <div className="flex-1">
@@ -87,18 +97,6 @@ const HomePage = () => {
                   <span className="font-bold text-xl md:text-2xl block text-white">No MOQ</span>
                   <span className="text-white/80">Minimum Order</span>
                 </div>
-              </div>
-            </div>
-            
-            {/* Image Container - Top on mobile, Right on desktop */}
-            <div className="w-full md:w-2/5 lg:w-1/3 flex-shrink-0 animate-slide-up">
-              <div className="relative rounded-xl overflow-hidden border-2 border-white/20 shadow-2xl group cursor-pointer transition-all duration-300 hover:shadow-primary/30 hover:border-white/40 hover:scale-105">
-                <img 
-                  src={heroImage} 
-                  alt="Precision Manufacturing" 
-                  className="w-full h-48 md:h-64 lg:h-80 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent transition-opacity duration-300 group-hover:opacity-60" />
               </div>
             </div>
           </div>
