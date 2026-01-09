@@ -142,7 +142,7 @@
   }
 
   .section-padding {
-    @apply py-16 md:py-20 lg:py-24;
+    @apply py-10 md:py-12 lg:py-14;
   }
 
   .card-hover {
