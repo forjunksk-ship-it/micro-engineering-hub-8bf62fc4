@@ -110,7 +110,13 @@
 
   html {
     scroll-behavior: smooth;
-    font-size: 12.6px;
+    font-size: 14px;
+  }
+
+  @media (min-width: 768px) {
+    html {
+      font-size: 12.6px;
+    }
   }
 
   @media (min-width: 1280px) {
