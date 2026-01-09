@@ -76,35 +76,41 @@ const HomePage = () => {
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             {/* Image Carousel - Top on mobile, Left on desktop */}
             <div className="w-full md:w-2/5 lg:w-1/3 flex-shrink-0 animate-slide-up">
-              <div className="relative rounded-xl overflow-hidden border-2 border-white/20 shadow-2xl group cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-primary/20 hover:border-primary/40">
-                <img 
-                  src={heroImages[currentImageIndex].src} 
-                  alt={heroImages[currentImageIndex].alt} 
-                  className="w-full h-48 md:h-64 lg:h-80 object-cover transition-transform duration-500"
-                />
+              <div className="relative rounded-xl overflow-hidden border-2 border-white/20 shadow-2xl group cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-primary/20 hover:border-primary/40 h-48 md:h-64 lg:h-80">
+                {/* All images stacked with fade transition */}
+                {heroImages.map((image, index) => (
+                  <img 
+                    key={index}
+                    src={image.src} 
+                    alt={image.alt} 
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out ${
+                      index === currentImageIndex ? "opacity-100" : "opacity-0"
+                    }`}
+                  />
+                ))}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 
                 {/* Navigation Arrows - visible on hover */}
                 <button 
                   onClick={prevImage}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-primary p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-primary p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-200 z-10"
                 >
                   <ChevronLeft className="h-5 w-5 text-white" />
                 </button>
                 <button 
                   onClick={nextImage}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-primary p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-primary p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-200 z-10"
                 >
                   <ChevronRight className="h-5 w-5 text-white" />
                 </button>
                 
                 {/* Dots Indicator */}
-                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
                   {heroImages.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentImageIndex(index)}
-                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      className={`w-2 h-2 rounded-full transition-all duration-200 ${
                         index === currentImageIndex 
                           ? "bg-primary w-4" 
                           : "bg-white/50 hover:bg-white/80"
