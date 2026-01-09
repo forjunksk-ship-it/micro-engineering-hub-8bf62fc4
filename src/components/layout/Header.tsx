@@ -20,16 +20,16 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 text-[114%] md:text-[100%]">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 text-[120%] md:text-[100%]">
       {/* Main navigation */}
-      <nav className="container-custom py-2 md:py-3">
+      <nav className="container-custom py-2 md:py-3 pl-6 md:pl-4">
         <div className="flex items-center justify-between">
           {/* Logo - smaller on mobile, same content */}
           <Link to="/" className="flex items-center gap-2 md:gap-3">
-            <img src={logo} alt="Micro Engineering Logo" className="h-9 md:h-10 w-auto" />
+            <img src={logo} alt="Micro Engineering Logo" className="h-10 md:h-10 w-auto" />
             <div>
               <h1 className="text-base md:text-lg font-bold text-foreground leading-tight">Micro Engineering</h1>
-              <p className="text-[10px] md:text-xs text-muted-foreground">Precision Manufacturing</p>
+              <p className="text-[11px] md:text-xs text-muted-foreground">Precision Manufacturing</p>
             </div>
           </Link>
 
@@ -63,7 +63,7 @@ const Header = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {isMenuOpen ? <X className="h-6 w-6 md:h-5 md:w-5" /> : <Menu className="h-6 w-6 md:h-5 md:w-5" />}
           </button>
         </div>
 
