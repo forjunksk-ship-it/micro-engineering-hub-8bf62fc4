@@ -181,7 +181,7 @@ const HomePage = () => {
               { step: "01", title: "Inquiry", desc: "Share your requirements and drawings" },
               { step: "02", title: "Quotation", desc: "Receive detailed pricing and timeline" },
               { step: "03", title: "Production", desc: "Manufacturing with quality checks" },
-              { step: "04", title: "Delivery", desc: "On-time delivery to your location" },
+              { step: "04", title: "Delivery", desc: "On-time delivery" },
             ].map((item, index) => (
               <div key={index} className="flex items-center">
                 <div className="flex flex-col items-center text-center px-2 sm:px-3 md:px-6">
