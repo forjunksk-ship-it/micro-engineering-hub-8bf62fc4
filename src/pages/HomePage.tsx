@@ -51,37 +51,52 @@ const HomePage = () => {
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
-        <div className="relative z-10 container-custom py-20">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-slide-up">
-              Custom Metal & Plastic Parts Manufacturing
-            </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed animate-slide-up" style={{ animationDelay: "0.1s" }}>
-              Your trusted partner for high-quality CNC machining, VMC operations, stamping, and custom fabrication.
-              We deliver prototype to production with <strong>no minimum order quantity</strong>.
-            </p>
-            <div className="flex flex-wrap gap-4 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-              <Button asChild size="lg" variant="cta" className="text-base">
-                <Link to="/contact">
-                  Get a Quote <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="backdrop-blur-sm bg-white/10 text-white border-white/20 hover:bg-white/20 text-base">
-                <Link to="/about">Learn More</Link>
-              </Button>
+        <div className="relative z-10 container-custom py-12 md:py-20">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            {/* Image Container - Top on mobile, Left on desktop */}
+            <div className="w-full md:w-2/5 lg:w-1/3 flex-shrink-0 animate-slide-up">
+              <div className="relative rounded-xl overflow-hidden border-2 border-white/20 shadow-2xl">
+                <img 
+                  src={heroImage} 
+                  alt="Precision Manufacturing" 
+                  className="w-full h-48 md:h-64 lg:h-80 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+              </div>
             </div>
-            <div className="mt-12 flex flex-wrap gap-8 text-sm animate-slide-up" style={{ animationDelay: "0.3s" }}>
-              <div>
-                <span className="font-bold text-2xl block text-white">25+</span>
-                <span className="text-white/80">Years Experience</span>
+            
+            {/* Text Content */}
+            <div className="flex-1">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 animate-slide-up">
+                Custom Metal & Plastic Parts Manufacturing
+              </h1>
+              <p className="text-base md:text-lg text-white/90 mb-8 leading-relaxed animate-slide-up" style={{ animationDelay: "0.1s" }}>
+                Your trusted partner for high-quality CNC machining, VMC operations, stamping, and custom fabrication.
+                We deliver prototype to production with <strong>no minimum order quantity</strong>.
+              </p>
+              <div className="flex flex-wrap gap-4 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+                <Button asChild size="lg" variant="cta" className="text-base">
+                  <Link to="/contact">
+                    Get a Quote <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="backdrop-blur-sm bg-white/10 text-white border-white/20 hover:bg-white/20 text-base">
+                  <Link to="/about">Learn More</Link>
+                </Button>
               </div>
-              <div>
-                <span className="font-bold text-2xl block text-white">2500+</span>
-                <span className="text-white/80">Projects Completed</span>
-              </div>
-              <div>
-                <span className="font-bold text-2xl block text-white">No MOQ</span>
-                <span className="text-white/80">Minimum Order</span>
+              <div className="mt-10 flex flex-wrap gap-6 md:gap-8 text-sm animate-slide-up" style={{ animationDelay: "0.3s" }}>
+                <div>
+                  <span className="font-bold text-xl md:text-2xl block text-white">25+</span>
+                  <span className="text-white/80">Years Experience</span>
+                </div>
+                <div>
+                  <span className="font-bold text-xl md:text-2xl block text-white">2500+</span>
+                  <span className="text-white/80">Projects Completed</span>
+                </div>
+                <div>
+                  <span className="font-bold text-xl md:text-2xl block text-white">No MOQ</span>
+                  <span className="text-white/80">Minimum Order</span>
+                </div>
               </div>
             </div>
           </div>
