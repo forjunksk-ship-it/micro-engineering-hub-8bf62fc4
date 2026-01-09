@@ -1,12 +1,23 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Cog, Shield, Award, Clock, Car, Heart, Cpu, Zap, Settings } from "lucide-react";
+import { ArrowRight, CheckCircle, Cog, Shield, Award, Clock, Car, Heart, Cpu, Zap, Settings, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
 import heroImage from "@/assets/hero-manufacturing.png";
+import cncMachiningImg from "@/assets/cnc-machining.png";
+import precisionImg from "@/assets/precision-components.png";
+import galleryImg from "@/assets/gallery-parts.png";
 import iconCnc from "@/assets/icon-cnc.png";
 import iconVmc from "@/assets/icon-vmc.png";
 import iconStamping from "@/assets/icon-stamping.png";
 import iconPrototype from "@/assets/icon-prototype.png";
 import iconMachinery from "@/assets/icon-machinery.png";
+
+const heroImages = [
+  { src: heroImage, alt: "Precision Manufacturing" },
+  { src: cncMachiningImg, alt: "CNC Machining" },
+  { src: precisionImg, alt: "Precision Components" },
+  { src: galleryImg, alt: "Gallery Parts" },
+];
 
 const industries = [
   { name: "Automotive", subtitle: "High-performance components", icon: Car, customIcon: null },
@@ -42,6 +53,16 @@ const capabilities = [
 ];
 
 const HomePage = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + heroImages.length) % heroImages.length);
+  };
+
   return (
     <div>
       {/* Hero Section */}
@@ -53,15 +74,44 @@ const HomePage = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
         <div className="relative z-10 container-custom py-12 md:py-20">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            {/* Image Container - Top on mobile, Left on desktop */}
+            {/* Image Carousel - Top on mobile, Left on desktop */}
             <div className="w-full md:w-2/5 lg:w-1/3 flex-shrink-0 animate-slide-up">
-              <div className="relative rounded-xl overflow-hidden border-2 border-white/20 shadow-2xl">
+              <div className="relative rounded-xl overflow-hidden border-2 border-white/20 shadow-2xl group cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-primary/20 hover:border-primary/40">
                 <img 
-                  src={heroImage} 
-                  alt="Precision Manufacturing" 
-                  className="w-full h-48 md:h-64 lg:h-80 object-cover"
+                  src={heroImages[currentImageIndex].src} 
+                  alt={heroImages[currentImageIndex].alt} 
+                  className="w-full h-48 md:h-64 lg:h-80 object-cover transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                
+                {/* Navigation Arrows - visible on hover */}
+                <button 
+                  onClick={prevImage}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-primary p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"
+                >
+                  <ChevronLeft className="h-5 w-5 text-white" />
+                </button>
+                <button 
+                  onClick={nextImage}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-primary p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"
+                >
+                  <ChevronRight className="h-5 w-5 text-white" />
+                </button>
+                
+                {/* Dots Indicator */}
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+                  {heroImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        index === currentImageIndex 
+                          ? "bg-primary w-4" 
+                          : "bg-white/50 hover:bg-white/80"
+                      }`}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
             
