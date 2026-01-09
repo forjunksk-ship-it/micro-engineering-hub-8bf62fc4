@@ -168,7 +168,7 @@ const HomePage = () => {
       </section>
 
       {/* Our Process Section */}
-      <section className="py-8 md:py-10 bg-background border-b border-border/50">
+      <section className="py-8 md:py-10 bg-muted/50 border-y border-border/50">
         <div className="container-custom">
           <div className="text-center mb-6">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">Our Process</h2>
