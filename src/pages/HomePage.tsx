@@ -192,7 +192,7 @@ const HomePage = () => {
                   <p className="text-muted-foreground text-xs md:text-sm max-w-[140px]">{item.desc}</p>
                 </div>
                 {index < 3 && (
-                  <div className="hidden md:block w-12 lg:w-20 h-0.5 bg-primary/30 -mt-8" />
+                  <div className="hidden md:block w-12 lg:w-20 h-0.5 bg-gradient-to-r from-primary to-primary/20 -mt-8" />
                 )}
               </div>
             ))}
