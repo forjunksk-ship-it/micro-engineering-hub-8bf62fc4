@@ -176,23 +176,23 @@ const HomePage = () => {
               Simple, transparent process from inquiry to delivery.
             </p>
           </div>
-          <div className="flex flex-wrap justify-center items-start gap-4 md:gap-0">
+          <div className="flex justify-center items-start overflow-x-auto pb-2">
             {[
               { step: "01", title: "Inquiry", desc: "Share your requirements and drawings" },
               { step: "02", title: "Quotation", desc: "Receive detailed pricing and timeline" },
               { step: "03", title: "Production", desc: "Manufacturing with quality checks" },
               { step: "04", title: "Delivery", desc: "On-time delivery to your location" },
             ].map((item, index) => (
-              <div key={index} className="flex items-center">
-                <div className="flex flex-col items-center text-center px-4 md:px-6">
-                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-lg md:text-xl font-bold mb-2">
+              <div key={index} className="flex items-center flex-shrink-0">
+                <div className="flex flex-col items-center text-center px-2 sm:px-4 md:px-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm sm:text-lg md:text-xl font-bold mb-2">
                     {item.step}
                   </div>
-                  <h3 className="font-semibold text-foreground text-sm md:text-base">{item.title}</h3>
-                  <p className="text-muted-foreground text-xs md:text-sm max-w-[140px]">{item.desc}</p>
+                  <h3 className="font-semibold text-foreground text-xs sm:text-sm md:text-base">{item.title}</h3>
+                  <p className="text-muted-foreground text-[10px] sm:text-xs md:text-sm max-w-[80px] sm:max-w-[120px] md:max-w-[140px]">{item.desc}</p>
                 </div>
                 {index < 3 && (
-                  <div className="hidden md:block w-12 lg:w-20 h-1 bg-gradient-to-r from-primary/10 via-primary to-primary/10 -mt-8 rounded-full" />
+                  <div className="w-6 sm:w-10 md:w-12 lg:w-20 h-1 bg-gradient-to-r from-primary/10 via-primary to-primary/10 -mt-8 rounded-full flex-shrink-0" />
                 )}
               </div>
             ))}
