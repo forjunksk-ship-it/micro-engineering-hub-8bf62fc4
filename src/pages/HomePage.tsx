@@ -74,13 +74,13 @@ const HomePage = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-[600px] md:min-h-[700px] flex items-center">
+      <section className="relative min-h-[450px] md:min-h-[500px] flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
-        <div className="relative z-10 container-custom py-12 md:py-20">
+        <div className="relative z-10 container-custom py-8 md:py-12">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             {/* Image Carousel - Top on mobile, Left on desktop */}
             <div className="w-full md:w-2/5 lg:w-1/3 flex-shrink-0 animate-slide-up">
