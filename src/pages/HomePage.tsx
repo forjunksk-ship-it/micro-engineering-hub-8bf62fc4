@@ -239,7 +239,7 @@ const HomePage = () => {
               State-of-the-art manufacturing capabilities to meet your most demanding requirements.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {capabilities.map((capability, index) => (
               <div
                 key={index}
