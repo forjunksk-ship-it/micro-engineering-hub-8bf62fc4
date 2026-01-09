@@ -50,7 +50,7 @@ const HomePage = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/55" />
         <div className="relative z-10 container-custom py-20">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-slide-up">
