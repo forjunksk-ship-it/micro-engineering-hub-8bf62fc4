@@ -167,6 +167,39 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Our Process Section */}
+      <section className="py-8 md:py-10 bg-background border-b border-border/50">
+        <div className="container-custom">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">Our Process</h2>
+            <p className="text-muted-foreground text-sm">
+              Simple, transparent process from inquiry to delivery.
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center items-start gap-4 md:gap-0">
+            {[
+              { step: "01", title: "Inquiry", desc: "Share your requirements and drawings" },
+              { step: "02", title: "Quotation", desc: "Receive detailed pricing and timeline" },
+              { step: "03", title: "Production", desc: "Manufacturing with quality checks" },
+              { step: "04", title: "Delivery", desc: "On-time delivery to your location" },
+            ].map((item, index) => (
+              <div key={index} className="flex items-center">
+                <div className="flex flex-col items-center text-center px-4 md:px-6">
+                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-lg md:text-xl font-bold mb-2">
+                    {item.step}
+                  </div>
+                  <h3 className="font-semibold text-foreground text-sm md:text-base">{item.title}</h3>
+                  <p className="text-muted-foreground text-xs md:text-sm max-w-[140px]">{item.desc}</p>
+                </div>
+                {index < 3 && (
+                  <div className="hidden md:block w-12 lg:w-20 h-0.5 bg-primary/30 -mt-8" />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Industries We Serve */}
       <section className="section-padding bg-background">
         <div className="container-custom">
