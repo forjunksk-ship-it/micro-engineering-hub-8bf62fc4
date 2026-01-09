@@ -29,7 +29,7 @@ const Header = () => {
             <img src={logo} alt="Micro Engineering Logo" className="h-10 md:h-10 w-auto" />
             <div>
               <h1 className="text-base md:text-lg font-bold text-foreground leading-tight">Micro Engineering</h1>
-              <p className="text-[11px] md:text-xs text-muted-foreground">Precision Manufacturing</p>
+              <p className="text-[11px] md:text-xs text-muted-foreground">Custom Parts Manufacturing</p>
             </div>
           </Link>
 
