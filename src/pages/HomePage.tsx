@@ -1,12 +1,24 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Cog, Shield, Award, Clock, Car, Heart, Cpu, Zap, Settings } from "lucide-react";
 import heroImage from "@/assets/hero-manufacturing.png";
+import cncImage from "@/assets/cnc-machining.png";
+import precisionImage from "@/assets/precision-components.png";
+import customImage from "@/assets/custom-solutions.png";
+import galleryImage from "@/assets/gallery-parts.png";
 import iconCnc from "@/assets/icon-cnc.png";
 import iconVmc from "@/assets/icon-vmc.png";
 import iconStamping from "@/assets/icon-stamping.png";
 import iconPrototype from "@/assets/icon-prototype.png";
 import iconMachinery from "@/assets/icon-machinery.png";
+
+const heroSlides = [
+  { image: cncImage, title: "CNC Machining" },
+  { image: precisionImage, title: "Precision Components" },
+  { image: customImage, title: "Custom Solutions" },
+  { image: galleryImage, title: "Quality Parts" },
+];
 
 const industries = [
   { name: "Automotive", subtitle: "High-performance components", icon: Car, customIcon: null },
@@ -42,46 +54,93 @@ const capabilities = [
 ];
 
 const HomePage = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-[600px] md:min-h-[700px] flex items-center">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/55" />
+      <section className="relative min-h-[600px] md:min-h-[700px] flex items-center bg-industrial-dark overflow-hidden">
         <div className="relative z-10 container-custom py-20">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-slide-up">
-              Custom Metal & Plastic Parts Manufacturing
-            </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed animate-slide-up" style={{ animationDelay: "0.1s" }}>
-              Your trusted partner for high-quality CNC machining, VMC operations, stamping, and custom fabrication.
-              We deliver prototype to production with <strong>no minimum order quantity</strong>.
-            </p>
-            <div className="flex flex-wrap gap-4 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-              <Button asChild size="lg" variant="cta" className="text-base">
-                <Link to="/contact">
-                  Get a Quote <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="backdrop-blur-sm bg-white/10 text-white border-white/20 hover:bg-white/20 text-base">
-                <Link to="/about">Learn More</Link>
-              </Button>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div>
+              <div className="inline-block bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6 animate-slide-up">
+                ISO 9001:2015 Certified Manufacturer
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-slide-up">
+                Custom Metal & Plastic{" "}
+                <span className="text-primary">Parts Manufacturer</span>
+              </h1>
+              <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed animate-slide-up" style={{ animationDelay: "0.1s" }}>
+                Precision-engineered components for automotive, aerospace, medical, and industrial applications.
+              </p>
+              <div className="flex flex-wrap gap-4 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+                <Button asChild size="lg" variant="cta" className="text-base">
+                  <Link to="/gallery">
+                    View Products
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="backdrop-blur-sm bg-white/10 text-white border-white/20 hover:bg-white/20 text-base">
+                  <Link to="/contact">Get a Quote</Link>
+                </Button>
+              </div>
+              <div className="mt-12 flex flex-wrap gap-8 text-sm animate-slide-up" style={{ animationDelay: "0.3s" }}>
+                <div>
+                  <span className="font-bold text-2xl block text-primary">25+</span>
+                  <span className="text-white/70 uppercase text-xs tracking-wider">Years</span>
+                </div>
+                <div>
+                  <span className="font-bold text-2xl block text-primary">500+</span>
+                  <span className="text-white/70 uppercase text-xs tracking-wider">Projects</span>
+                </div>
+                <div>
+                  <span className="font-bold text-2xl block text-primary">100%</span>
+                  <span className="text-white/70 uppercase text-xs tracking-wider">Quality</span>
+                </div>
+              </div>
             </div>
-            <div className="mt-12 flex flex-wrap gap-8 text-sm animate-slide-up" style={{ animationDelay: "0.3s" }}>
-              <div>
-                <span className="font-bold text-2xl block text-white">25+</span>
-                <span className="text-white/80">Years Experience</span>
+
+            {/* Right Image Carousel */}
+            <div className="relative animate-slide-up" style={{ animationDelay: "0.2s" }}>
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                {heroSlides.map((slide, index) => (
+                  <div
+                    key={index}
+                    className={`absolute inset-0 transition-opacity duration-700 ${
+                      index === currentSlide ? "opacity-100" : "opacity-0"
+                    }`}
+                  >
+                    <img
+                      src={slide.image}
+                      alt={slide.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                      <span className="text-white font-medium">{slide.title}</span>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div>
-                <span className="font-bold text-2xl block text-white">2500+</span>
-                <span className="text-white/80">Projects Completed</span>
-              </div>
-              <div>
-                <span className="font-bold text-2xl block text-white">No MOQ</span>
-                <span className="text-white/80">Minimum Order</span>
+              {/* Carousel Dots */}
+              <div className="flex justify-center gap-2 mt-4">
+                {heroSlides.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-2.5 h-2.5 rounded-full transition-all ${
+                      index === currentSlide
+                        ? "bg-primary w-8"
+                        : "bg-white/40 hover:bg-white/60"
+                    }`}
+                  />
+                ))}
               </div>
             </div>
           </div>
