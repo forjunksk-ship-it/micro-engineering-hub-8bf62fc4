@@ -130,13 +130,6 @@
     font-family: 'Inter', 'Roboto', system-ui, sans-serif;
   }
 
-  /* Desktop zoom for better viewing - Chrome/Edge/Safari only */
-  @media (min-width: 1024px) {
-    body {
-      zoom: 0.93;
-    }
-  }
-
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Inter', 'Roboto', system-ui, sans-serif;
     @apply font-semibold tracking-tight;
