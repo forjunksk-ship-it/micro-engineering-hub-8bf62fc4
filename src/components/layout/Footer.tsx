@@ -71,21 +71,21 @@ const Footer = () => {
             <h4 className="text-sm font-semibold mb-2">Contact Us</h4>
             <ul className="space-y-1.5">
               <li>
-                <a href="tel:+919999999999" className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors">
+                <a href="tel:+919354382712" className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors">
                   <Phone className="h-4 w-4 flex-shrink-0" />
-                  <span className="text-xs">+91 99999 99999</span>
+                  <span className="text-xs">+91 9354382712</span>
                 </a>
               </li>
               <li>
-                <a href="mailto:info@microengineering.in" className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors">
+                <a href="mailto:microggn@gmail.com" className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors">
                   <Mail className="h-4 w-4 flex-shrink-0" />
-                  <span className="text-xs">info@microengineering.in</span>
+                  <span className="text-xs">microggn@gmail.com</span>
                 </a>
               </li>
               <li>
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <MapPin className="h-4 w-4 flex-shrink-0" />
-                  <span className="text-xs">Industrial Area, City, State - 000000</span>
+                  <span className="text-xs">207, Sector 7, IMT Manesar, Gurugram, Haryana 122051</span>
                 </div>
               </li>
             </ul>

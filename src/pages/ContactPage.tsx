@@ -57,9 +57,9 @@ const ContactPage = () => {
               <h2 className="text-2xl font-bold text-foreground mb-6">Contact Information</h2>
               <div className="space-y-6">
                 {[
-                  { icon: Phone, title: "Phone", content: "+91 99999 99999", href: "tel:+919999999999" },
-                  { icon: Mail, title: "Email", content: "info@microengineering.in", href: "mailto:info@microengineering.in" },
-                  { icon: MapPin, title: "Address", content: "Industrial Area, City, State - 000000" },
+                  { icon: Phone, title: "Phone", content: "+91 9354382712", href: "tel:+919354382712" },
+                  { icon: Mail, title: "Email", content: "microggn@gmail.com", href: "mailto:microggn@gmail.com" },
+                  { icon: MapPin, title: "Address", content: "207, Sector 7, IMT Manesar, Gurugram, Haryana 122051" },
                   { icon: Clock, title: "Business Hours", content: "Mon - Sat: 9:00 AM - 6:00 PM" },
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-4 p-4 bg-card rounded-lg border border-border">
