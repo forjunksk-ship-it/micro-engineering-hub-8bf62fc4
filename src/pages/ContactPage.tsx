@@ -60,7 +60,6 @@ const ContactPage = () => {
                   { icon: Phone, title: "Phone", content: "+91 9354382712", href: "tel:+919354382712" },
                   { icon: Mail, title: "Email", content: "microggn@gmail.com", href: "mailto:microggn@gmail.com" },
                   { icon: MapPin, title: "Address", content: "207, Sector 7, IMT Manesar, Gurugram, Haryana 122051" },
-                  { icon: Clock, title: "Business Hours", content: "Mon - Sat: 9:00 AM - 6:00 PM" },
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-4 p-4 bg-card rounded-lg border border-border">
                     <item.icon className="h-6 w-6 text-primary flex-shrink-0" />
