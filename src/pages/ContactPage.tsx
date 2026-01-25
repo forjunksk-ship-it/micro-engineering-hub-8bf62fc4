@@ -10,14 +10,30 @@ const ContactPage = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", company: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
-      toast({ title: "Enquiry Sent!", description: "We'll get back to you within 24 hours." });
-      setFormData({ name: "", email: "", phone: "", company: "", message: "" });
+    
+    try {
+      const response = await fetch('/send-email.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      
+      const result = await response.json();
+      
+      if (result.success) {
+        toast({ title: "Enquiry Sent!", description: "We'll get back to you within 24 hours." });
+        setFormData({ name: "", email: "", phone: "", company: "", message: "" });
+      } else {
+        toast({ title: "Error", description: result.message || "Failed to send enquiry. Please try again.", variant: "destructive" });
+      }
+    } catch (error) {
+      toast({ title: "Error", description: "Network error. Please try again.", variant: "destructive" });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
