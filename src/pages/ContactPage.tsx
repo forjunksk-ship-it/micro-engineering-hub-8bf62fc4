@@ -7,12 +7,20 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 const ContactPage = () => {
   const { toast } = useToast();
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", company: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", company: "", message: "", website: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    
+    // Honeypot check - if filled, it's a bot
+    if (formData.website) {
+      toast({ title: "Enquiry Sent!", description: "We'll get back to you within 24 hours." });
+      setFormData({ name: "", email: "", phone: "", company: "", message: "", website: "" });
+      setIsSubmitting(false);
+      return;
+    }
     
     try {
       const response = await fetch('/send-email.php', {
@@ -25,7 +33,8 @@ const ContactPage = () => {
       
       if (result.success) {
         toast({ title: "Enquiry Sent!", description: "We'll get back to you within 24 hours." });
-        setFormData({ name: "", email: "", phone: "", company: "", message: "" });
+        setFormData({ name: "", email: "", phone: "", company: "", message: "", website: "" });
+        
       } else {
         toast({ title: "Error", description: result.message || "Failed to send enquiry. Please try again.", variant: "destructive" });
       }
@@ -65,6 +74,17 @@ const ContactPage = () => {
                   <Input placeholder="Company Name" value={formData.company} onChange={(e) => setFormData({ ...formData, company: e.target.value })} />
                 </div>
                 <Textarea placeholder="Your Message / Requirements" required rows={5} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
+                
+                {/* Honeypot field - hidden from users, bots will fill it */}
+                <input
+                  type="text"
+                  name="website"
+                  value={formData.website}
+                  onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                  className="absolute -left-[9999px] opacity-0 h-0 w-0"
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
                 
                 <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90" disabled={isSubmitting}>
                   {isSubmitting ? "Sending..." : "Send Enquiry"}
