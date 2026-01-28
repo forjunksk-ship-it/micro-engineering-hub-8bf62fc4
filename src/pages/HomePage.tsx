@@ -19,6 +19,7 @@ import iconPrototype from "@/assets/icon-prototype.png";
 import iconMachinery from "@/assets/icon-machinery.png";
 
 const heroImages = [
+  { src: galleryImg, alt: "Gallery Parts" },
   { src: product1, alt: "Metal Mounting Plates" },
   { src: product2, alt: "CNC Machined Bracket" },
   { src: product3, alt: "Precision Formed Components" },
@@ -28,7 +29,6 @@ const heroImages = [
   { src: product7, alt: "Black Coated Bracket" },
   { src: product8, alt: "Assembly Component" },
   { src: precisionImg, alt: "Precision Components" },
-  { src: galleryImg, alt: "Gallery Parts" },
 ];
 
 const industries = [
