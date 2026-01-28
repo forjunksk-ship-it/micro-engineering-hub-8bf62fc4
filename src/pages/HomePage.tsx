@@ -67,6 +67,7 @@ const capabilities = [
 const HomePage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const touchStartX = useRef<number | null>(null);
 
   // Function to start/restart the auto-slide timer
   const startAutoSlide = useCallback(() => {
@@ -103,6 +104,29 @@ const HomePage = () => {
     startAutoSlide(); // Reset timer after manual slide
   };
 
+  // Touch handlers for swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX.current - touchEndX;
+    const minSwipeDistance = 50; // minimum swipe distance in pixels
+    
+    if (Math.abs(diff) > minSwipeDistance) {
+      if (diff > 0) {
+        nextImage(); // Swipe left = next image
+      } else {
+        prevImage(); // Swipe right = previous image
+      }
+    }
+    
+    touchStartX.current = null;
+  };
+
   return (
     <div>
       {/* Hero Section */}
@@ -116,7 +140,11 @@ const HomePage = () => {
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             {/* Image Carousel - Top on mobile, Left on desktop */}
             <div className="w-full md:w-2/5 lg:w-1/3 flex-shrink-0 animate-slide-up">
-              <div className="relative rounded-xl overflow-hidden border-2 border-white/20 shadow-2xl group cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-primary/20 hover:border-primary/40 aspect-[4/3]">
+                <div 
+                  className="relative rounded-xl overflow-hidden border-2 border-white/20 shadow-2xl group cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-primary/20 hover:border-primary/40 aspect-[4/3]"
+                  onTouchStart={handleTouchStart}
+                  onTouchEnd={handleTouchEnd}
+                >
                 {/* All images stacked with fade transition */}
                 {heroImages.map((image, index) => (
                   <img 
