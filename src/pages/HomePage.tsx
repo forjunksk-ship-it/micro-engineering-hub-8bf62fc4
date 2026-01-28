@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Cog, Shield, Award, Clock, Car, Heart, Cpu, Zap, Settings, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import heroImage from "@/assets/hero-manufacturing.png";
-import cncMachiningImg from "@/assets/cnc-machining.png";
 import precisionImg from "@/assets/precision-components.png";
 import galleryImg from "@/assets/gallery-parts.png";
 import iconCnc from "@/assets/icon-cnc.png";
@@ -13,8 +11,6 @@ import iconPrototype from "@/assets/icon-prototype.png";
 import iconMachinery from "@/assets/icon-machinery.png";
 
 const heroImages = [
-  { src: heroImage, alt: "Precision Manufacturing" },
-  { src: cncMachiningImg, alt: "CNC Machining" },
   { src: precisionImg, alt: "Precision Components" },
   { src: galleryImg, alt: "Gallery Parts" },
 ];
@@ -77,7 +73,7 @@ const HomePage = () => {
       <section className="relative min-h-[400px] md:min-h-[450px] flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
+          style={{ backgroundImage: `url(${precisionImg})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
         <div className="relative z-10 container-custom py-6 md:py-10">
