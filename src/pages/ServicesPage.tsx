@@ -173,6 +173,8 @@ const ServicesPage = () => {
               <img
                 src={prototypeImage}
                 alt="Prototype Development"
+                loading="lazy"
+                decoding="async"
                 className="rounded-lg shadow-lg w-full"
               />
             </div>
@@ -214,6 +216,8 @@ const ServicesPage = () => {
               <img
                 src={additionalServicesImage}
                 alt="Additional Services"
+                loading="lazy"
+                decoding="async"
                 className="rounded-lg shadow-lg w-full"
               />
             </div>
