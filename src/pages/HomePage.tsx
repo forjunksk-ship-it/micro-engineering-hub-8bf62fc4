@@ -203,7 +203,7 @@ const HomePage = () => {
             
             {/* Text Content */}
             <div className="flex-1">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 animate-slide-up">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 animate-slide-up">
                 Custom Metal & Plastic Parts<br />Manufacturing
               </h1>
               <p className="text-base md:text-lg text-white/90 mb-8 leading-relaxed animate-slide-up" style={{ animationDelay: "0.1s" }}>
