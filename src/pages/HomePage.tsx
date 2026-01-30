@@ -73,21 +73,26 @@ const HomePage = () => {
 
   // Intersection Observer for Process section animation
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsProcessVisible(true);
-          observer.disconnect(); // Only animate once
-        }
-      },
-      { threshold: 0.3 }
-    );
+    // Small delay to ensure initial render with hidden state
+    const timeoutId = setTimeout(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setIsProcessVisible(true);
+            observer.disconnect(); // Only animate once
+          }
+        },
+        { threshold: 0.1, rootMargin: "-50px" }
+      );
 
-    if (processRef.current) {
-      observer.observe(processRef.current);
-    }
+      if (processRef.current) {
+        observer.observe(processRef.current);
+      }
 
-    return () => observer.disconnect();
+      return () => observer.disconnect();
+    }, 100);
+
+    return () => clearTimeout(timeoutId);
   }, []);
 
   // Function to start/restart the auto-slide timer
