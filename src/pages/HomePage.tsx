@@ -65,6 +65,7 @@ const capabilities = [
 ];
 
 const HomePage = () => {
+  // Hero carousel state
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const touchStartX = useRef<number | null>(null);
