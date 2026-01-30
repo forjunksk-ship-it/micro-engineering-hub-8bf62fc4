@@ -146,8 +146,8 @@ const HomePage = () => {
     <div>
       {/* Hero Section */}
       <section className="relative min-h-[400px] md:min-h-[450px] flex items-center">
-        <div className="absolute inset-0 bg-[hsl(215_35%_15%)]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215_35%_15%/0.95)] via-[hsl(215_35%_15%/0.88)] to-[hsl(215_35%_15%/0.70)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(215_35%_10%)] via-[hsl(215_35%_18%)] to-[hsl(215_35%_25%)]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215_35%_12%/0.90)] via-transparent to-[hsl(215_35%_22%/0.60)]" />
         <div className="relative z-10 container-custom py-6 md:py-10 lg:py-14">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
             {/* Image Carousel - Top on mobile, Left on desktop */}
