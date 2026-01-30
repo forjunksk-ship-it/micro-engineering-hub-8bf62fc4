@@ -151,7 +151,7 @@ const HomePage = () => {
         <div className="relative z-10 container-custom py-6 md:py-10 lg:py-14">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
             {/* Image Carousel - Top on mobile, Left on desktop */}
-            <div className="w-full md:w-[38%] lg:w-[43%] flex-shrink-0 animate-slide-up">
+            <div className="w-full md:w-[36%] lg:w-[40%] flex-shrink-0 animate-slide-up">
                 <div 
                   className="relative rounded-xl overflow-hidden border-2 border-white/20 shadow-2xl group cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-primary/20 hover:border-primary/40 aspect-[4/3]"
                   onTouchStart={handleTouchStart}
