@@ -1,21 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
-import galleryImage from "@/assets/gallery-parts.png";
-import cncImage from "@/assets/cnc-machining.png";
-import precisionImage from "@/assets/precision-components.png";
-import customImage from "@/assets/custom-solutions.png";
+import { X, ImageIcon } from "lucide-react";
 
 const galleryItems = [
-  { image: galleryImage, title: "Precision Parts", category: "CNC" },
-  { image: cncImage, title: "CNC Machining", category: "CNC" },
-  { image: precisionImage, title: "Metal Components", category: "Fabrication" },
-  { image: customImage, title: "Custom Solutions", category: "Custom" },
-  { image: galleryImage, title: "Assembly Work", category: "Assembly" },
-  { image: cncImage, title: "VMC Operations", category: "CNC" },
-  { image: precisionImage, title: "Stamped Parts", category: "Stamping" },
-  { image: customImage, title: "Tube Bending", category: "Fabrication" },
+  { image: null, title: "Precision Parts", category: "CNC" },
+  { image: null, title: "CNC Machining", category: "CNC" },
+  { image: null, title: "Metal Components", category: "Fabrication" },
+  { image: null, title: "Custom Solutions", category: "Custom" },
+  { image: null, title: "Assembly Work", category: "Assembly" },
+  { image: null, title: "VMC Operations", category: "CNC" },
+  { image: null, title: "Stamped Parts", category: "Stamping" },
+  { image: null, title: "Tube Bending", category: "Fabrication" },
 ];
 
 const GalleryPage = () => {
@@ -38,12 +34,19 @@ const GalleryPage = () => {
             {galleryItems.map((item, index) => (
               <div
                 key={index}
-                className="group relative aspect-square rounded-lg overflow-hidden cursor-pointer"
-                onClick={() => setSelectedImage(item.image)}
+                className="group relative aspect-square rounded-lg overflow-hidden cursor-pointer border border-border bg-muted"
+                onClick={() => item.image && setSelectedImage(item.image)}
               >
-                <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+                {item.image ? (
+                  <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+                ) : (
+                  <div className="w-full h-full flex flex-col items-center justify-center gap-2 text-muted-foreground">
+                    <ImageIcon className="h-12 w-12" />
+                    <span className="text-xs">No Image</span>
+                  </div>
+                )}
                 <div className="absolute inset-0 bg-industrial-dark/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <span className="text-primary-foreground font-semibold">{item.title}</span>
+                  <span className="text-primary-foreground font-semibold text-sm text-center px-2">{item.title}</span>
                 </div>
               </div>
             ))}
