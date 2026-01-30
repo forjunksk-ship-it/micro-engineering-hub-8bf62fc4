@@ -150,7 +150,7 @@ const HomePage = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroPartsCollection})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215_35%_15%/0.92)] via-[hsl(215_35%_15%/0.82)] to-[hsl(215_35%_15%/0.60)]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215_35%_15%/0.95)] via-[hsl(215_35%_15%/0.88)] to-[hsl(215_35%_15%/0.70)]" />
         <div className="relative z-10 container-custom py-6 md:py-10">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             {/* Image Carousel - Top on mobile, Left on desktop */}
