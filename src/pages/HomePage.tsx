@@ -282,11 +282,11 @@ const HomePage = () => {
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent" />
                 {/* Text Content */}
-                <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
-                  <h3 className="text-base md:text-lg font-semibold text-white mb-1 md:mb-2">{capability.title}</h3>
-                  <p className="text-white/80 text-xs md:text-sm line-clamp-2">{capability.description}</p>
+                <div className="absolute inset-0 flex flex-col justify-center p-4 md:p-6 pt-[50%]">
+                  <h3 className="text-sm sm:text-base md:text-xl font-semibold text-white mb-1 md:mb-2">{capability.title}</h3>
+                  <p className="text-white/90 text-xs sm:text-sm md:text-base leading-relaxed">{capability.description}</p>
                 </div>
               </div>
             ))}
