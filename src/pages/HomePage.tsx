@@ -145,13 +145,13 @@ const HomePage = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-[400px] md:min-h-[450px] flex items-center">
+      <section className="relative min-h-[400px] md:min-h-[450px] lg:min-h-[520px] flex items-center">
         <div className="absolute inset-0 bg-[hsl(215_35%_15%)]" />
         <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215_35%_15%/0.95)] via-[hsl(215_35%_15%/0.88)] to-[hsl(215_35%_15%/0.70)]" />
-        <div className="relative z-10 container-custom py-6 md:py-10">
-          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <div className="relative z-10 container-custom py-6 md:py-10 lg:py-14">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
             {/* Image Carousel - Top on mobile, Left on desktop */}
-            <div className="w-full md:w-2/5 lg:w-1/3 flex-shrink-0 animate-slide-up">
+            <div className="w-full md:w-2/5 lg:w-[45%] flex-shrink-0 animate-slide-up">
                 <div 
                   className="relative rounded-xl overflow-hidden border-2 border-white/20 shadow-2xl group cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-primary/20 hover:border-primary/40 aspect-[4/3]"
                   onTouchStart={handleTouchStart}
@@ -203,34 +203,34 @@ const HomePage = () => {
             
             {/* Text Content */}
             <div className="flex-1">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 animate-slide-up">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 lg:mb-8 animate-slide-up">
                 Custom Metal & Plastic Parts Manufacturing
               </h1>
-              <p className="text-base md:text-lg text-white/90 mb-8 leading-relaxed animate-slide-up" style={{ animationDelay: "0.1s" }}>
+              <p className="text-base md:text-lg lg:text-xl text-white/90 mb-8 lg:mb-10 leading-relaxed animate-slide-up" style={{ animationDelay: "0.1s" }}>
                 Your trusted partner for high-quality CNC machining, VMC operations, stamping, and custom fabrication.
                 We deliver prototype to production with <strong>no minimum order quantity</strong>.
               </p>
               <div className="flex flex-wrap gap-4 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-                <Button asChild size="lg" variant="cta" className="text-base">
+                <Button asChild size="lg" variant="cta" className="text-base lg:text-lg lg:px-8 lg:py-6">
                   <Link to="/contact">
                     Get a Quote <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="backdrop-blur-sm bg-white/10 text-white border-white/20 hover:bg-white/20 text-base">
+                <Button asChild size="lg" variant="outline" className="backdrop-blur-sm bg-white/10 text-white border-white/20 hover:bg-white/20 text-base lg:text-lg lg:px-8 lg:py-6">
                   <Link to="/about">Learn More</Link>
                 </Button>
               </div>
-              <div className="mt-10 flex flex-wrap gap-6 md:gap-8 text-sm animate-slide-up" style={{ animationDelay: "0.3s" }}>
+              <div className="mt-10 lg:mt-12 flex flex-wrap gap-6 md:gap-8 lg:gap-10 text-sm lg:text-base animate-slide-up" style={{ animationDelay: "0.3s" }}>
                 <div>
-                  <span className="font-bold text-xl md:text-2xl block text-white">25+</span>
+                  <span className="font-bold text-xl md:text-2xl lg:text-3xl block text-white">25+</span>
                   <span className="text-white/80">Years Experience</span>
                 </div>
                 <div>
-                  <span className="font-bold text-xl md:text-2xl block text-white">2500+</span>
+                  <span className="font-bold text-xl md:text-2xl lg:text-3xl block text-white">2500+</span>
                   <span className="text-white/80">Projects Completed</span>
                 </div>
                 <div>
-                  <span className="font-bold text-xl md:text-2xl block text-white">No MOQ</span>
+                  <span className="font-bold text-xl md:text-2xl lg:text-3xl block text-white">No MOQ</span>
                   <span className="text-white/80">Minimum Order</span>
                 </div>
               </div>
