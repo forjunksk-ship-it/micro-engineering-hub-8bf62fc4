@@ -65,7 +65,6 @@ const capabilities = [
 ];
 
 const HomePage = () => {
-  // Hero carousel state
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const touchStartX = useRef<number | null>(null);
@@ -151,9 +150,7 @@ const HomePage = () => {
                   <img 
                     key={index}
                     src={image.src} 
-                    alt={image.alt}
-                    loading={index === 0 ? "eager" : "lazy"}
-                    decoding="async"
+                    alt={image.alt} 
                     className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out ${
                       index === currentImageIndex ? "opacity-100" : "opacity-0"
                     }`}
@@ -282,8 +279,6 @@ const HomePage = () => {
                 <img
                   src={capability.image}
                   alt={capability.title}
-                  loading="lazy"
-                  decoding="async"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 {/* Gradient Overlay */}
