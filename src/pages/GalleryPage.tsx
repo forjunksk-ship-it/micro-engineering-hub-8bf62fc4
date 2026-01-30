@@ -40,9 +40,8 @@ const GalleryPage = () => {
                 {item.image ? (
                   <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
                 ) : (
-                  <div className="w-full h-full flex flex-col items-center justify-center gap-2 text-muted-foreground">
+                  <div className="w-full h-full flex items-center justify-center text-muted-foreground">
                     <ImageIcon className="h-12 w-12" />
-                    <span className="text-xs">No Image</span>
                   </div>
                 )}
                 <div className="absolute inset-0 bg-industrial-dark/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
