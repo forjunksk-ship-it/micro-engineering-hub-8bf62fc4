@@ -3,15 +3,15 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Wrench, Sparkles } from "lucide-react";
 import prototypeImage from "@/assets/prototype-part.png";
 import additionalServicesImage from "@/assets/additional-services.png";
-import iconCnc from "@/assets/icon-cnc.png";
-import iconVmc from "@/assets/icon-vmc.png";
-import iconStamping from "@/assets/icon-stamping.png";
+import capabilityCnc from "@/assets/capability-cnc.jpeg";
+import capabilityVmc from "@/assets/capability-vmc.jpeg";
+import capabilityStamping from "@/assets/capability-stamping.jpeg";
 import iconFabrication from "@/assets/icon-fabrication.png";
 import iconBending from "@/assets/icon-bending.png";
 
 const services = [
   {
-    customIcon: iconCnc,
+    customIcon: capabilityCnc,
     title: "CNC Machining",
     description: "Precision CNC turning and milling services for complex components with tight tolerances. Multi-axis capabilities for intricate geometries.",
     features: [
@@ -22,7 +22,7 @@ const services = [
     ],
   },
   {
-    customIcon: iconVmc,
+    customIcon: capabilityVmc,
     title: "VMC Machining",
     description: "Vertical Machining Center operations for precision milling, drilling, and tapping. Ideal for prismatic parts and mold components.",
     features: [
@@ -33,7 +33,7 @@ const services = [
     ],
   },
   {
-    customIcon: iconStamping,
+    customIcon: capabilityStamping,
     title: "Stamping",
     description: "Sheet metal stamping services for high-volume production. Progressive die stamping, deep drawing, and forming operations.",
     features: [
