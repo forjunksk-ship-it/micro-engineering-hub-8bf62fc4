@@ -284,7 +284,7 @@ const HomePage = () => {
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent" />
                 {/* Text Content */}
-                <div className="absolute inset-0 flex flex-col justify-center p-4 md:p-6 pt-[50%]">
+                <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-6 pb-8 md:pb-10">
                   <h3 className="text-sm sm:text-base md:text-xl font-semibold text-white mb-1 md:mb-2">{capability.title}</h3>
                   <p className="text-white/90 text-xs sm:text-sm md:text-base leading-relaxed">{capability.description}</p>
                 </div>
