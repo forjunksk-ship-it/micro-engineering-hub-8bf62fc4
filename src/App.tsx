@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import ScrollToTop from "./components/ScrollToTop";
 
-// Lazy load pages for better initial load performance
+// Lazy load pages for better initial load performance - optimized bundle splitting
 const HomePage = lazy(() => import("./pages/HomePage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const ServicesPage = lazy(() => import("./pages/ServicesPage"));
