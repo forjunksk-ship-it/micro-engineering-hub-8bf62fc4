@@ -67,39 +67,56 @@ const HomePage = () => {
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const touchStartX = useRef<number | null>(null);
 
+  // Function to schedule the next auto-slide with variable timing
+  const scheduleNextSlide = useCallback((fromIndex: number) => {
+    if (intervalRef.current) {
+      clearTimeout(intervalRef.current);
+    }
+    // First image (index 0) shows for 6 seconds, others for 4 seconds
+    const delay = fromIndex === 0 ? 6000 : 4000;
+    intervalRef.current = setTimeout(() => {
+      setCurrentImageIndex((prev) => {
+        const nextIndex = (prev + 1) % heroImages.length;
+        scheduleNextSlide(nextIndex);
+        return nextIndex;
+      });
+    }, delay);
+  }, []);
+
   // Function to start/restart the auto-slide timer
   const startAutoSlide = useCallback(() => {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-    }
-    intervalRef.current = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
-    }, 4000);
-  }, []);
+    scheduleNextSlide(currentImageIndex);
+  }, [scheduleNextSlide, currentImageIndex]);
 
   // Start auto-slide on mount
   useEffect(() => {
-    startAutoSlide();
+    scheduleNextSlide(0);
     return () => {
       if (intervalRef.current) {
-        clearInterval(intervalRef.current);
+        clearTimeout(intervalRef.current);
       }
     };
-  }, [startAutoSlide]);
+  }, [scheduleNextSlide]);
 
   const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
-    startAutoSlide(); // Reset timer after manual slide
+    setCurrentImageIndex((prev) => {
+      const nextIndex = (prev + 1) % heroImages.length;
+      scheduleNextSlide(nextIndex);
+      return nextIndex;
+    });
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + heroImages.length) % heroImages.length);
-    startAutoSlide(); // Reset timer after manual slide
+    setCurrentImageIndex((prev) => {
+      const nextIndex = (prev - 1 + heroImages.length) % heroImages.length;
+      scheduleNextSlide(nextIndex);
+      return nextIndex;
+    });
   };
 
   const goToImage = (index: number) => {
     setCurrentImageIndex(index);
-    startAutoSlide(); // Reset timer after manual slide
+    scheduleNextSlide(index);
   };
 
   // Touch handlers for swipe
