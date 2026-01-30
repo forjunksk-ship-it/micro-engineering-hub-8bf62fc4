@@ -227,33 +227,30 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Our Process Section */}
+      {/* Capabilities */}
       <section className="py-8 md:py-10 bg-secondary">
-        <div className="container-custom px-2 sm:px-4 md:px-6">
-          <div className="text-center mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">Our Process</h2>
-            <p className="text-muted-foreground text-sm">
-              Simple, transparent process from inquiry to delivery.
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Capabilities</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              State-of-the-art manufacturing capabilities to meet your most demanding requirements.
             </p>
           </div>
-          <div className="flex justify-center items-start">
-            {[
-              { step: "01", title: "Inquiry", desc: "Share your requirements and drawings" },
-              { step: "02", title: "Quotation", desc: "Receive detailed pricing and timeline" },
-              { step: "03", title: "Production", desc: "Manufacturing with quality checks" },
-              { step: "04", title: "Delivery", desc: "On-time delivery" },
-            ].map((item, index) => (
-              <div key={index} className="flex items-center">
-                <div className="flex flex-col items-center text-center px-2 sm:px-3 md:px-6">
-                  <div className="w-11 h-11 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm sm:text-base md:text-xl font-bold mb-1 sm:mb-2">
-                    {item.step}
-                  </div>
-                  <h3 className="font-semibold text-foreground text-xs sm:text-sm md:text-base">{item.title}</h3>
-                  <p className="text-muted-foreground text-[9px] sm:text-xs md:text-sm max-w-[70px] sm:max-w-[110px] md:max-w-[140px]">{item.desc}</p>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            {capabilities.map((capability, index) => (
+              <div
+                key={index}
+                className="bg-card rounded-lg p-6 card-hover border border-border group text-center"
+              >
+                <div className="h-32 w-32 mb-5 mx-auto flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                  <img
+                    src={capability.icon}
+                    alt={capability.title}
+                    className="h-full w-full object-contain"
+                  />
                 </div>
-                {index < 3 && (
-                  <div className="w-4 sm:w-8 md:w-12 lg:w-20 h-0.5 sm:h-1 bg-gradient-to-r from-primary/10 via-primary to-primary/10 -mt-6 sm:-mt-8 rounded-full" />
-                )}
+                <h3 className="text-lg font-semibold text-foreground mb-2">{capability.title}</h3>
+                <p className="text-muted-foreground text-sm">{capability.description}</p>
               </div>
             ))}
           </div>
@@ -290,30 +287,33 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Capabilities */}
+      {/* Our Process Section */}
       <section className="section-padding bg-secondary">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Capabilities</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              State-of-the-art manufacturing capabilities to meet your most demanding requirements.
+        <div className="container-custom px-2 sm:px-4 md:px-6">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">Our Process</h2>
+            <p className="text-muted-foreground text-sm">
+              Simple, transparent process from inquiry to delivery.
             </p>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {capabilities.map((capability, index) => (
-              <div
-                key={index}
-                className="bg-card rounded-lg p-6 card-hover border border-border group text-center"
-              >
-                <div className="h-32 w-32 mb-5 mx-auto flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-                  <img
-                    src={capability.icon}
-                    alt={capability.title}
-                    className="h-full w-full object-contain"
-                  />
+          <div className="flex justify-center items-start">
+            {[
+              { step: "01", title: "Inquiry", desc: "Share your requirements and drawings" },
+              { step: "02", title: "Quotation", desc: "Receive detailed pricing and timeline" },
+              { step: "03", title: "Production", desc: "Manufacturing with quality checks" },
+              { step: "04", title: "Delivery", desc: "On-time delivery" },
+            ].map((item, index) => (
+              <div key={index} className="flex items-center">
+                <div className="flex flex-col items-center text-center px-2 sm:px-3 md:px-6">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm sm:text-base md:text-xl font-bold mb-1 sm:mb-2">
+                    {item.step}
+                  </div>
+                  <h3 className="font-semibold text-foreground text-xs sm:text-sm md:text-base">{item.title}</h3>
+                  <p className="text-muted-foreground text-[9px] sm:text-xs md:text-sm max-w-[70px] sm:max-w-[110px] md:max-w-[140px]">{item.desc}</p>
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">{capability.title}</h3>
-                <p className="text-muted-foreground text-sm">{capability.description}</p>
+                {index < 3 && (
+                  <div className="w-4 sm:w-8 md:w-12 lg:w-20 h-0.5 sm:h-1 bg-gradient-to-r from-primary/10 via-primary to-primary/10 -mt-6 sm:-mt-8 rounded-full" />
+                )}
               </div>
             ))}
           </div>
