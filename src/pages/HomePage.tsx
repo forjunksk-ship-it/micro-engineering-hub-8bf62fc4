@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Cog, Shield, Award, Clock, Car, Heart, Cpu, Zap, Settings, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect, useRef, useCallback } from "react";
 import heroPartsCollection from "@/assets/hero-parts-collection.jpg";
+import heroManufacturing from "@/assets/hero-manufacturing.png";
 import product1 from "@/assets/product-1.jpg";
 import product2 from "@/assets/product-2.jpg";
 import product3 from "@/assets/product-3.jpg";
@@ -148,7 +149,7 @@ const HomePage = () => {
       <section className="relative min-h-[400px] md:min-h-[450px] flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroPartsCollection})` }}
+          style={{ backgroundImage: `url(${heroManufacturing})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
         <div className="relative z-10 container-custom py-6 md:py-10">
