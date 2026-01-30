@@ -150,7 +150,9 @@ const HomePage = () => {
                   <img 
                     key={index}
                     src={image.src} 
-                    alt={image.alt} 
+                    alt={image.alt}
+                    loading={index === 0 ? "eager" : "lazy"}
+                    decoding="async"
                     className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out ${
                       index === currentImageIndex ? "opacity-100" : "opacity-0"
                     }`}
@@ -279,6 +281,8 @@ const HomePage = () => {
                 <img
                   src={capability.image}
                   alt={capability.title}
+                  loading="lazy"
+                  decoding="async"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 {/* Gradient Overlay */}
