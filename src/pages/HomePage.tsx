@@ -148,6 +148,25 @@ const HomePage = () => {
       <section className="relative min-h-[400px] md:min-h-[450px] flex items-center">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(215_40%_6%)] via-[hsl(215_35%_18%)] to-[hsl(215_30%_32%)]" />
         <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215_40%_8%/0.85)] via-transparent to-[hsl(215_25%_35%/0.50)]" />
+        {/* Decorative Gear Pattern */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Large gear - top right */}
+          <svg className="absolute -top-20 -right-20 w-80 h-80 text-white/[0.06]" viewBox="0 0 100 100" fill="currentColor">
+            <path d="M50 20 L53 20 L54 15 L58 16 L59 11 L63 13 L65 8 L69 11 L72 7 L75 11 L79 8 L81 13 L85 11 L86 16 L90 15 L90 20 L95 21 L93 25 L97 28 L94 31 L97 35 L93 37 L95 42 L90 42 L90 47 L86 46 L85 51 L81 49 L79 54 L75 51 L72 55 L69 51 L65 54 L63 49 L59 51 L58 46 L54 47 L53 42 L48 42 L50 37 L46 35 L49 31 L46 28 L50 25 L48 21 L53 20 Z M50 35 A15 15 0 1 0 50 65 A15 15 0 1 0 50 35 Z"/>
+          </svg>
+          {/* Medium gear - bottom left */}
+          <svg className="absolute -bottom-16 -left-16 w-56 h-56 text-white/[0.05]" viewBox="0 0 100 100" fill="currentColor">
+            <path d="M50 15 L54 15 L55 8 L60 10 L63 4 L68 8 L72 3 L76 9 L81 5 L84 12 L89 10 L90 17 L96 17 L94 24 L100 28 L96 33 L100 39 L94 42 L96 49 L90 49 L89 56 L84 54 L81 61 L76 57 L72 63 L68 58 L63 62 L60 56 L55 58 L54 51 L48 51 L50 44 L44 40 L48 35 L44 29 L50 26 L48 19 L54 19 Z M50 32 A18 18 0 1 0 50 68 A18 18 0 1 0 50 32 Z"/>
+          </svg>
+          {/* Small gear - center left */}
+          <svg className="absolute top-1/3 left-10 w-32 h-32 text-white/[0.04]" viewBox="0 0 100 100" fill="currentColor">
+            <path d="M50 22 L54 22 L56 14 L62 17 L66 10 L71 15 L77 10 L80 18 L87 15 L88 23 L96 23 L93 31 L100 37 L93 43 L96 51 L88 51 L87 59 L80 56 L77 64 L71 59 L66 64 L62 57 L56 60 L54 52 L46 52 L48 44 L40 38 L48 32 L46 24 L54 24 Z M50 36 A14 14 0 1 0 50 64 A14 14 0 1 0 50 36 Z"/>
+          </svg>
+          {/* Tiny gear - top center */}
+          <svg className="absolute top-8 left-1/3 w-20 h-20 text-white/[0.05]" viewBox="0 0 100 100" fill="currentColor">
+            <path d="M50 20 L55 20 L57 12 L65 16 L70 8 L77 15 L84 10 L88 20 L97 20 L94 30 L102 38 L94 46 L97 56 L88 56 L84 66 L77 61 L70 68 L65 60 L57 64 L55 56 L45 56 L48 46 L40 38 L48 30 L45 20 Z M50 34 A16 16 0 1 0 50 66 A16 16 0 1 0 50 34 Z"/>
+          </svg>
+        </div>
         <div className="relative z-10 container-custom py-6 md:py-10 lg:py-14">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
             {/* Image Carousel - Top on mobile, Left on desktop */}
