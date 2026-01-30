@@ -146,10 +146,7 @@ const HomePage = () => {
     <div>
       {/* Hero Section */}
       <section className="relative min-h-[400px] md:min-h-[450px] flex items-center">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroPartsCollection})` }}
-        />
+        <div className="absolute inset-0 bg-[hsl(215_35%_15%)]" />
         <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215_35%_15%/0.95)] via-[hsl(215_35%_15%/0.88)] to-[hsl(215_35%_15%/0.70)]" />
         <div className="relative z-10 container-custom py-6 md:py-10">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
