@@ -15,7 +15,7 @@ import product8 from "@/assets/product-8.jpg";
 import capabilityCnc from "@/assets/capability-cnc.jpeg";
 import capabilityVmc from "@/assets/capability-vmc.jpeg";
 import capabilityStamping from "@/assets/capability-stamping.jpeg";
-import capabilityPrototypes from "@/assets/capability-prototypes.jpeg";
+import capabilityPrototypes from "@/assets/capability-prototypes-new.jpg";
 import iconMachinery from "@/assets/icon-machinery.png";
 
 const heroImages = [
