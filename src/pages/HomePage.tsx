@@ -12,10 +12,10 @@ import product5 from "@/assets/product-5.jpg";
 import product6 from "@/assets/product-6.jpg";
 import product7 from "@/assets/product-7.jpg";
 import product8 from "@/assets/product-8.jpg";
-import iconCnc from "@/assets/icon-cnc.png";
-import iconVmc from "@/assets/icon-vmc.png";
-import iconStamping from "@/assets/icon-stamping.png";
-import iconPrototype from "@/assets/icon-prototype.png";
+import capabilityCnc from "@/assets/capability-cnc.jpeg";
+import capabilityVmc from "@/assets/capability-vmc.jpeg";
+import capabilityStamping from "@/assets/capability-stamping.jpeg";
+import capabilityPrototypes from "@/assets/capability-prototypes.jpeg";
 import iconMachinery from "@/assets/icon-machinery.png";
 
 const heroImages = [
@@ -45,22 +45,22 @@ const capabilities = [
   {
     title: "CNC Machining",
     description: "High-precision CNC turning and milling for complex geometries",
-    icon: iconCnc,
+    image: capabilityCnc,
   },
   {
     title: "VMC Machining",
     description: "Vertical machining centers for accurate multi-axis operations",
-    icon: iconVmc,
+    image: capabilityVmc,
   },
   {
     title: "Stamping, Tube Bending & Metal Fabrication",
     description: "Sheet metal stamping, tube bending and custom fabrication solutions",
-    icon: iconStamping,
+    image: capabilityStamping,
   },
   {
     title: "Prototype Parts",
     description: "Rapid prototyping with no minimum order quantity",
-    icon: iconPrototype,
+    image: capabilityPrototypes,
   },
 ];
 
@@ -240,17 +240,21 @@ const HomePage = () => {
             {capabilities.map((capability, index) => (
               <div
                 key={index}
-                className="bg-card rounded-lg p-6 card-hover border border-border group text-center"
+                className="relative rounded-lg overflow-hidden card-hover group aspect-[3/4] md:aspect-[4/5]"
               >
-                <div className="h-32 w-32 mb-5 mx-auto flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-                  <img
-                    src={capability.icon}
-                    alt={capability.title}
-                    className="h-full w-full object-contain"
-                  />
+                {/* Background Image */}
+                <img
+                  src={capability.image}
+                  alt={capability.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                {/* Text Content */}
+                <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
+                  <h3 className="text-base md:text-lg font-semibold text-white mb-1 md:mb-2">{capability.title}</h3>
+                  <p className="text-white/80 text-xs md:text-sm line-clamp-2">{capability.description}</p>
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">{capability.title}</h3>
-                <p className="text-muted-foreground text-sm">{capability.description}</p>
               </div>
             ))}
           </div>
