@@ -68,32 +68,6 @@ const HomePage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const touchStartX = useRef<number | null>(null);
-  const [isProcessVisible, setIsProcessVisible] = useState(false);
-  const processRef = useRef<HTMLDivElement | null>(null);
-
-  // Intersection Observer for Process section animation
-  useEffect(() => {
-    // Small delay to ensure initial render with hidden state
-    const timeoutId = setTimeout(() => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setIsProcessVisible(true);
-            observer.disconnect(); // Only animate once
-          }
-        },
-        { threshold: 0.1, rootMargin: "-50px" }
-      );
-
-      if (processRef.current) {
-        observer.observe(processRef.current);
-      }
-
-      return () => observer.disconnect();
-    }, 100);
-
-    return () => clearTimeout(timeoutId);
-  }, []);
 
   // Function to start/restart the auto-slide timer
   const startAutoSlide = useCallback(() => {
@@ -254,7 +228,7 @@ const HomePage = () => {
       </section>
 
       {/* Our Process Section */}
-      <section className="py-8 md:py-10 bg-secondary" ref={processRef}>
+      <section className="py-8 md:py-10 bg-secondary">
         <div className="container-custom px-2 sm:px-4 md:px-6">
           <div className="text-center mb-6">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">Our Process</h2>
@@ -270,14 +244,7 @@ const HomePage = () => {
               { step: "04", title: "Delivery", desc: "On-time delivery" },
             ].map((item, index) => (
               <div key={index} className="flex items-center">
-                <div 
-                  className={`flex flex-col items-center text-center px-2 sm:px-3 md:px-6 transition-all duration-500 ${
-                    isProcessVisible 
-                      ? "opacity-100 translate-y-0" 
-                      : "opacity-0 translate-y-4"
-                  }`}
-                  style={{ transitionDelay: isProcessVisible ? `${index * 400}ms` : "0ms" }}
-                >
+                <div className="flex flex-col items-center text-center px-2 sm:px-3 md:px-6">
                   <div className="w-11 h-11 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm sm:text-base md:text-xl font-bold mb-1 sm:mb-2">
                     {item.step}
                   </div>
@@ -285,12 +252,7 @@ const HomePage = () => {
                   <p className="text-muted-foreground text-[9px] sm:text-xs md:text-sm max-w-[70px] sm:max-w-[110px] md:max-w-[140px]">{item.desc}</p>
                 </div>
                 {index < 3 && (
-                  <div 
-                    className={`w-4 sm:w-8 md:w-12 lg:w-20 h-0.5 sm:h-1 bg-gradient-to-r from-primary/10 via-primary to-primary/10 -mt-6 sm:-mt-8 rounded-full origin-left transition-transform duration-500 ${
-                      isProcessVisible ? "scale-x-100" : "scale-x-0"
-                    }`}
-                    style={{ transitionDelay: isProcessVisible ? `${index * 400 + 200}ms` : "0ms" }}
-                  />
+                  <div className="w-4 sm:w-8 md:w-12 lg:w-20 h-0.5 sm:h-1 bg-gradient-to-r from-primary/10 via-primary to-primary/10 -mt-6 sm:-mt-8 rounded-full" />
                 )}
               </div>
             ))}
