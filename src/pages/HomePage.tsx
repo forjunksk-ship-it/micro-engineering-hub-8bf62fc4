@@ -148,8 +148,54 @@ const HomePage = () => {
       <section className="relative min-h-[400px] md:min-h-[450px] flex items-center">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(215_40%_6%)] via-[hsl(215_35%_18%)] to-[hsl(215_30%_32%)]" />
         <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215_40%_8%/0.85)] via-transparent to-[hsl(215_25%_35%/0.50)]" />
-        {/* Decorative Gear Pattern */}
+        {/* Decorative Gear & Blueprint Pattern */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Blueprint Grid */}
+          <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.02)" strokeWidth="0.5"/>
+              </pattern>
+              <pattern id="largeGrid" width="100" height="100" patternUnits="userSpaceOnUse">
+                <rect width="100" height="100" fill="url(#smallGrid)"/>
+                <path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.04)" strokeWidth="1"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#largeGrid)" />
+          </svg>
+          
+          {/* Blueprint dimension lines - top */}
+          <svg className="absolute top-12 left-1/4 w-48 h-8 text-white/[0.06]" viewBox="0 0 200 30">
+            <line x1="0" y1="15" x2="200" y2="15" stroke="currentColor" strokeWidth="1"/>
+            <line x1="0" y1="8" x2="0" y2="22" stroke="currentColor" strokeWidth="1"/>
+            <line x1="200" y1="8" x2="200" y2="22" stroke="currentColor" strokeWidth="1"/>
+            <line x1="100" y1="10" x2="100" y2="20" stroke="currentColor" strokeWidth="0.5"/>
+            <text x="100" y="8" textAnchor="middle" fill="currentColor" fontSize="6" fontFamily="monospace">150.00</text>
+          </svg>
+          
+          {/* Blueprint dimension lines - right side */}
+          <svg className="absolute top-1/4 right-8 w-8 h-32 text-white/[0.05]" viewBox="0 0 30 120">
+            <line x1="15" y1="0" x2="15" y2="120" stroke="currentColor" strokeWidth="1"/>
+            <line x1="8" y1="0" x2="22" y2="0" stroke="currentColor" strokeWidth="1"/>
+            <line x1="8" y1="120" x2="22" y2="120" stroke="currentColor" strokeWidth="1"/>
+            <text x="15" y="65" textAnchor="middle" fill="currentColor" fontSize="6" fontFamily="monospace" transform="rotate(-90, 15, 60)">85.50</text>
+          </svg>
+          
+          {/* Blueprint corner markers */}
+          <svg className="absolute bottom-16 right-1/4 w-24 h-24 text-white/[0.05]" viewBox="0 0 100 100">
+            <path d="M0 30 L0 0 L30 0" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+            <circle cx="0" cy="0" r="3" fill="currentColor"/>
+            <text x="35" y="8" fill="currentColor" fontSize="5" fontFamily="monospace">A1</text>
+          </svg>
+          
+          {/* Technical circle with crosshairs */}
+          <svg className="absolute bottom-1/3 left-1/4 w-20 h-20 text-white/[0.04]" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" strokeWidth="1"/>
+            <circle cx="50" cy="50" r="25" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="4 2"/>
+            <line x1="50" y1="5" x2="50" y2="95" stroke="currentColor" strokeWidth="0.5"/>
+            <line x1="5" y1="50" x2="95" y2="50" stroke="currentColor" strokeWidth="0.5"/>
+          </svg>
+          
           {/* Large gear - top right */}
           <svg className="absolute -top-20 -right-20 w-80 h-80 text-white/[0.06]" viewBox="0 0 100 100" fill="currentColor">
             <path d="M50 20 L53 20 L54 15 L58 16 L59 11 L63 13 L65 8 L69 11 L72 7 L75 11 L79 8 L81 13 L85 11 L86 16 L90 15 L90 20 L95 21 L93 25 L97 28 L94 31 L97 35 L93 37 L95 42 L90 42 L90 47 L86 46 L85 51 L81 49 L79 54 L75 51 L72 55 L69 51 L65 54 L63 49 L59 51 L58 46 L54 47 L53 42 L48 42 L50 37 L46 35 L49 31 L46 28 L50 25 L48 21 L53 20 Z M50 35 A15 15 0 1 0 50 65 A15 15 0 1 0 50 35 Z"/>
