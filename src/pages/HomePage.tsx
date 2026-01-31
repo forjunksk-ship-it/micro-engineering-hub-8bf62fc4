@@ -7,6 +7,9 @@ import product1 from "@/assets/product-1.jpg";
 import product3 from "@/assets/product-3.jpg";
 import product5 from "@/assets/product-5.jpg";
 import product6 from "@/assets/product-6.jpg";
+import product9 from "@/assets/product-9.jpg";
+import product10 from "@/assets/product-10.jpg";
+import product11 from "@/assets/product-11.jpg";
 import capabilityCnc from "@/assets/capability-cnc.jpeg";
 import capabilityVmc from "@/assets/capability-vmc.jpeg";
 import capabilityStamping from "@/assets/capability-stamping.jpeg";
@@ -19,6 +22,9 @@ const heroImages = [
   { src: product3, alt: "Precision Formed Components" },
   { src: product5, alt: "Precision Connector" },
   { src: product6, alt: "Brass Fittings" },
+  { src: product9, alt: "Steel Hinge Assembly" },
+  { src: product10, alt: "Black Coated Bracket" },
+  { src: product11, alt: "Red Anodized Component" },
 ];
 
 const industries = [
