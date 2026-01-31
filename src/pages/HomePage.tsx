@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Cog, Shield, Award, Clock, Car, Heart, Cpu, Zap, Settings, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, CheckCircle, Award, Clock, Car, Heart, Cpu, Zap, Settings, ChevronLeft, ChevronRight, ShieldCheck, Shield } from "lucide-react";
 import { useState, useEffect, useRef, useCallback } from "react";
 import heroPartsCollection from "@/assets/hero-parts-collection.jpg";
 import product1 from "@/assets/product-1.jpg";
@@ -425,12 +425,11 @@ const HomePage = () => {
                 ))}
               </ul>
             </div>
-            <div className="grid grid-cols-4 gap-2 md:grid-cols-2 md:gap-6">
+            <div className="grid grid-cols-3 gap-2 md:grid-cols-3 md:gap-6">
               {[
                 { icon: Award, title: "Quality Assured", desc: "Rigorous quality control at every step" },
                 { icon: Clock, title: "On-Time Delivery", desc: "Meeting deadlines consistently" },
-                { icon: Shield, title: "Reliable Partner", desc: "Trusted by leading companies" },
-                { icon: Cog, title: "Advanced Tech", desc: "Latest manufacturing equipment" },
+                { icon: ShieldCheck, title: "Reliable Partner", desc: "Trusted by leading companies" },
               ].map((item, index) => (
                 <div key={index} className="bg-card border border-border rounded-lg p-2 md:p-6 text-center">
                   <item.icon className="h-5 w-5 md:h-10 md:w-10 text-primary mx-auto mb-1 md:mb-3" />
