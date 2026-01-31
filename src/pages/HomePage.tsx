@@ -4,13 +4,9 @@ import { ArrowRight, CheckCircle, Cog, Shield, Award, Clock, Car, Heart, Cpu, Za
 import { useState, useEffect, useRef, useCallback } from "react";
 import heroPartsCollection from "@/assets/hero-parts-collection.jpg";
 import product1 from "@/assets/product-1.jpg";
-import product2 from "@/assets/product-2.jpg";
 import product3 from "@/assets/product-3.jpg";
-import product4 from "@/assets/product-4.jpg";
 import product5 from "@/assets/product-5.jpg";
 import product6 from "@/assets/product-6.jpg";
-import product7 from "@/assets/product-7.jpg";
-import product8 from "@/assets/product-8.jpg";
 import capabilityCnc from "@/assets/capability-cnc.jpeg";
 import capabilityVmc from "@/assets/capability-vmc.jpeg";
 import capabilityStamping from "@/assets/capability-stamping.jpeg";
@@ -20,13 +16,9 @@ import iconMachinery from "@/assets/icon-machinery.png";
 const heroImages = [
   { src: heroPartsCollection, alt: "Precision Metal Parts Collection" },
   { src: product1, alt: "Metal Mounting Plates" },
-  { src: product2, alt: "CNC Machined Bracket" },
   { src: product3, alt: "Precision Formed Components" },
-  { src: product4, alt: "Anodized Aluminum Part" },
   { src: product5, alt: "Precision Connector" },
   { src: product6, alt: "Brass Fittings" },
-  { src: product7, alt: "Black Coated Bracket" },
-  { src: product8, alt: "Assembly Component" },
 ];
 
 const industries = [
