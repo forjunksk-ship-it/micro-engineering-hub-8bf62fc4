@@ -425,17 +425,17 @@ const HomePage = () => {
                 ))}
               </ul>
             </div>
-            <div className="flex flex-row gap-3 md:grid md:grid-cols-2 md:gap-6 overflow-x-auto pb-2 md:pb-0">
+            <div className="grid grid-cols-4 gap-2 md:grid-cols-2 md:gap-6">
               {[
                 { icon: Award, title: "Quality Assured", desc: "Rigorous quality control at every step" },
                 { icon: Clock, title: "On-Time Delivery", desc: "Meeting deadlines consistently" },
                 { icon: Shield, title: "Reliable Partner", desc: "Trusted by leading companies" },
                 { icon: Cog, title: "Advanced Tech", desc: "Latest manufacturing equipment" },
               ].map((item, index) => (
-                <div key={index} className="bg-card border border-border rounded-lg p-3 md:p-6 text-center flex-shrink-0 min-w-[120px] md:min-w-0">
-                  <item.icon className="h-6 w-6 md:h-10 md:w-10 text-primary mx-auto mb-1 md:mb-3" />
-                  <h4 className="font-semibold text-foreground text-xs md:text-base mb-0.5 md:mb-1">{item.title}</h4>
-                  <p className="text-[10px] md:text-sm text-muted-foreground hidden md:block">{item.desc}</p>
+                <div key={index} className="bg-card border border-border rounded-lg p-2 md:p-6 text-center">
+                  <item.icon className="h-5 w-5 md:h-10 md:w-10 text-primary mx-auto mb-1 md:mb-3" />
+                  <h4 className="font-semibold text-foreground text-[10px] md:text-base mb-0.5 md:mb-1 leading-tight">{item.title}</h4>
+                  <p className="text-[8px] md:text-sm text-muted-foreground leading-tight">{item.desc}</p>
                 </div>
               ))}
             </div>
