@@ -78,17 +78,6 @@ const services = [
       "Packaging solutions",
     ],
   },
-  {
-    customIcon: prototypeImage,
-    title: "Prototype Development",
-    description: "Rapid prototyping services to validate designs quickly. No minimum order quantity - order even single pieces.",
-    features: [
-      "No minimum order quantity",
-      "Quick turnaround",
-      "Design optimization support",
-      "Seamless transition to production",
-    ],
-  },
 ];
 
 const solutions = [
@@ -173,6 +162,40 @@ const ServicesPage = () => {
                 </ul>
               </div>
             ))}
+          </div>
+
+          {/* Prototype Development - Centered Box */}
+          <div className="mt-12 max-w-4xl mx-auto">
+            <div className="bg-card border border-border rounded-xl overflow-hidden shadow-lg">
+              <div className="grid md:grid-cols-2">
+                <div>
+                  <img
+                    src={prototypeImage}
+                    alt="Prototype Development"
+                    className="w-full h-48 md:h-full object-cover"
+                  />
+                </div>
+                <div className="p-6 md:p-8 flex flex-col justify-center">
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3">Prototype Development</h3>
+                  <p className="text-muted-foreground mb-4 text-sm md:text-base">
+                    Rapid prototyping services to validate designs quickly. No minimum order quantity - order even single pieces.
+                  </p>
+                  <ul className="space-y-2">
+                    {[
+                      "No minimum order quantity",
+                      "Quick turnaround",
+                      "Design optimization support",
+                      "Seamless transition to production",
+                    ].map((feature, idx) => (
+                      <li key={idx} className="flex items-center gap-2 text-sm text-foreground">
+                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
