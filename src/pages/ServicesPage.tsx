@@ -10,6 +10,7 @@ import iconFabrication from "@/assets/icon-fabrication.png";
 import iconBending from "@/assets/icon-bending.png";
 import customImage from "@/assets/custom-solutions.png";
 import cncImage from "@/assets/cnc-machining.png";
+import customToolingImage from "@/assets/custom-tooling.jpg";
 
 const services = [
   {
@@ -103,7 +104,7 @@ const solutions = [
       "Gauges and inspection tools",
       "Tool maintenance support",
     ],
-    image: cncImage,
+    image: customToolingImage,
   },
 ];
 
