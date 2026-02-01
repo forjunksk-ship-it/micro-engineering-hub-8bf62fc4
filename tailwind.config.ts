@@ -95,8 +95,8 @@ export default {
           to: { opacity: "1", transform: "translateY(0)" },
         },
         "ripple": {
-          "0%": { transform: "scale(0)", opacity: "0.8" },
-          "100%": { transform: "scale(1)", opacity: "0" },
+          "0%": { transform: "scale(0.5)", opacity: "0.7" },
+          "100%": { transform: "scale(2.5)", opacity: "0" },
         },
         "wiggle": {
           "0%, 100%": { transform: "rotate(-8deg)" },

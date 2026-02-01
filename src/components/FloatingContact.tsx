@@ -16,8 +16,8 @@ const FloatingContact = () => {
       aria-label="Contact us"
     >
       {/* Ripple animation */}
-      <span className="absolute inset-0 rounded-full bg-primary/40 animate-ripple" />
-      <span className="absolute inset-0 rounded-full bg-primary/30 animate-ripple [animation-delay:0.5s]" />
+      <span className="absolute inset-0 rounded-full bg-primary/60 animate-ripple" />
+      <span className="absolute inset-0 rounded-full bg-primary/50 animate-ripple [animation-delay:0.5s]" />
       
       {/* Main button */}
       <span className="relative flex items-center justify-center bg-accent hover:bg-accent/90 text-accent-foreground w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
