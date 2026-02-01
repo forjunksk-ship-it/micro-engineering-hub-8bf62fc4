@@ -153,7 +153,7 @@ const AboutPage = () => {
               </div>
               <div className="bg-card border border-border rounded-lg p-6 text-center">
                 <Users className="h-10 w-10 text-primary mx-auto mb-3" />
-                <div className="text-sm text-muted-foreground">Skilled Workers</div>
+                <div className="text-sm text-muted-foreground">Expert Team</div>
               </div>
               <div className="bg-accent text-accent-foreground rounded-lg p-6 text-center">
                 <Shield className="h-10 w-10 mx-auto mb-3" />
