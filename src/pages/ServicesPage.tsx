@@ -262,18 +262,18 @@ const ServicesPage = () => {
               Simple, transparent process from inquiry to delivery.
             </p>
           </div>
-          <div className="flex justify-center items-start">
+          <div className="flex justify-center items-start overflow-hidden">
             {processSteps.map((step, index) => (
               <div key={index} className="flex items-center">
-                <div className="flex flex-col items-center text-center px-2 sm:px-3 md:px-6">
-                  <div className="w-11 h-11 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm sm:text-base md:text-xl font-bold mb-1 sm:mb-2">
+                <div className="flex flex-col items-center text-center px-1 sm:px-3 md:px-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs sm:text-base md:text-xl font-bold mb-1 sm:mb-2">
                     {step.step}
                   </div>
-                  <h3 className="font-semibold text-foreground text-xs sm:text-sm md:text-base">{step.title}</h3>
-                  <p className="text-muted-foreground text-[9px] sm:text-xs md:text-sm max-w-[70px] sm:max-w-[110px] md:max-w-[140px]">{step.description}</p>
+                  <h3 className="font-semibold text-foreground text-[10px] sm:text-sm md:text-base">{step.title}</h3>
+                  <p className="text-muted-foreground text-[8px] sm:text-xs md:text-sm max-w-[60px] sm:max-w-[110px] md:max-w-[140px]">{step.description}</p>
                 </div>
                 {index < processSteps.length - 1 && (
-                  <div className="w-16 sm:w-20 md:w-32 lg:w-40 h-1 bg-gradient-to-r from-transparent via-primary to-transparent -mt-6 sm:-mt-8" />
+                  <div className="w-6 sm:w-12 md:w-32 lg:w-40 h-1 bg-gradient-to-r from-transparent via-primary to-transparent -mt-6 sm:-mt-8" />
                 )}
               </div>
             ))}
