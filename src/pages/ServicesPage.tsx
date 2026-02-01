@@ -211,40 +211,38 @@ const ServicesPage = () => {
             </p>
           </div>
 
-          <div className="space-y-12">
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
             {solutions.map((solution, index) => (
               <div
                 key={index}
-                className="bg-card border border-border rounded-xl overflow-hidden shadow-lg"
+                className="bg-card border border-border rounded-xl overflow-hidden shadow-lg flex flex-col"
               >
-                <div className={`grid lg:grid-cols-2`}>
-                  {/* Image - Always first on mobile */}
-                  <div className={`${index % 2 === 1 ? "lg:order-2" : ""}`}>
-                    <img
-                      src={solution.image}
-                      alt={solution.title}
-                      className="w-full h-48 sm:h-56 md:h-64 lg:h-full object-cover"
-                    />
-                  </div>
-                  {/* Content */}
-                  <div className={`p-6 md:p-8 lg:p-10 flex flex-col justify-center ${index % 2 === 1 ? "lg:order-1" : ""}`}>
-                    <solution.icon className="h-10 w-10 md:h-12 md:w-12 text-primary mb-3 md:mb-4" />
-                    <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-3 md:mb-4">{solution.title}</h3>
-                    <p className="text-muted-foreground mb-4 md:mb-6 leading-relaxed text-sm md:text-base">{solution.description}</p>
-                    <ul className="space-y-2 md:space-y-3 mb-4 md:mb-6">
-                      {solution.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-start gap-2 md:gap-3">
-                          <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-foreground text-sm md:text-base">{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 w-fit">
-                      <Link to="/contact">
-                        Discuss Your Requirements <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </div>
+                {/* Image */}
+                <div className="h-48 sm:h-56 md:h-48 lg:h-56">
+                  <img
+                    src={solution.image}
+                    alt={solution.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                {/* Content */}
+                <div className="p-5 md:p-6 flex flex-col flex-1">
+                  <solution.icon className="h-8 w-8 md:h-10 md:w-10 text-primary mb-3" />
+                  <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-foreground mb-2 md:mb-3">{solution.title}</h3>
+                  <p className="text-muted-foreground mb-4 leading-relaxed text-sm">{solution.description}</p>
+                  <ul className="space-y-2 mb-4 flex-1">
+                    {solution.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-foreground text-sm">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 w-fit">
+                    <Link to="/contact">
+                      Discuss Your Requirements <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
                 </div>
               </div>
             ))}
