@@ -78,6 +78,17 @@ const services = [
       "Packaging solutions",
     ],
   },
+  {
+    customIcon: prototypeImage,
+    title: "Prototype Development",
+    description: "Rapid prototyping services to validate designs quickly. No minimum order quantity - order even single pieces.",
+    features: [
+      "No minimum order quantity",
+      "Quick turnaround",
+      "Design optimization support",
+      "Seamless transition to production",
+    ],
+  },
 ];
 
 const solutions = [
@@ -217,49 +228,6 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* Prototype Services */}
-      <section className="section-padding bg-background">
-        <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-center lg:text-left">
-                Prototype Development
-              </h2>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                We understand that innovation starts with prototypes. Our rapid prototyping services
-                help you validate designs quickly without the burden of minimum order quantities.
-              </p>
-              <ul className="space-y-4 mb-8">
-                {[
-                  "No minimum order quantity - order even single pieces",
-                  "Quick turnaround for urgent requirements",
-                  "Design feedback and optimization support",
-                  "Same quality as production parts",
-                  "Cost-effective prototype iterations",
-                  "Seamless transition to production",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-                <Link to="/contact">
-                  Request Prototype Quote <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-            <div>
-              <img
-                src={prototypeImage}
-                alt="Prototype Development"
-                className="rounded-lg shadow-lg w-full"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
 
 
       {/* Process */}
