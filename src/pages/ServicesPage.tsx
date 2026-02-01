@@ -328,15 +328,15 @@ const ServicesPage = () => {
               We believe in building long-term partnerships rather than transactional relationships.
               When you work with Micro Engineering, you get a dedicated team committed to your success.
             </p>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6">
               {[
                 { title: "Understanding", desc: "We take time to understand your business and requirements" },
                 { title: "Collaboration", desc: "Work together to find the best manufacturing solutions" },
                 { title: "Support", desc: "Continuous support from prototype to production and beyond" },
               ].map((item, index) => (
-                <div key={index} className="bg-secondary border border-border rounded-lg p-6">
-                  <h4 className="font-semibold text-lg text-foreground mb-2">{item.title}</h4>
-                  <p className="text-sm text-muted-foreground">{item.desc}</p>
+                <div key={index} className="bg-secondary border border-border rounded-lg p-3 sm:p-4 md:p-6">
+                  <h4 className="font-semibold text-xs sm:text-base md:text-lg text-foreground mb-1 sm:mb-2">{item.title}</h4>
+                  <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground">{item.desc}</p>
                 </div>
               ))}
             </div>
