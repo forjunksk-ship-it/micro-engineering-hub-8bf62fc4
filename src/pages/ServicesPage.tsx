@@ -262,19 +262,21 @@ const ServicesPage = () => {
               Simple, transparent process from inquiry to delivery.
             </p>
           </div>
-          <div className="grid md:grid-cols-4 gap-6">
-            {processSteps.map((step, index) => (
-              <div key={index} className="relative text-center">
-                <div className="bg-primary text-primary-foreground w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                  {step.step}
+          <div className="overflow-x-auto pb-4">
+            <div className="flex gap-4 md:gap-6 min-w-max md:min-w-0 md:grid md:grid-cols-4 px-4 md:px-0">
+              {processSteps.map((step, index) => (
+                <div key={index} className="relative text-center flex-shrink-0 w-32 md:w-auto">
+                  <div className="bg-primary text-primary-foreground w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4 text-base md:text-xl font-bold">
+                    {step.step}
+                  </div>
+                  <h3 className="text-sm md:text-lg font-semibold text-foreground mb-1 md:mb-2">{step.title}</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground">{step.description}</p>
+                  {index < processSteps.length - 1 && (
+                    <div className="hidden md:block absolute top-8 left-[60%] w-[80%] h-0.5 bg-border" />
+                  )}
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">{step.title}</h3>
-                <p className="text-sm text-muted-foreground">{step.description}</p>
-                {index < processSteps.length - 1 && (
-                  <div className="hidden md:block absolute top-8 left-[60%] w-[80%] h-0.5 bg-border" />
-                )}
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
