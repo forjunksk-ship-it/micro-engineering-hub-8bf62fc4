@@ -107,28 +107,6 @@ const solutions = [
   },
 ];
 
-const industries = [
-  {
-    name: "Automotive",
-    description: "Precision components for OEMs and tier suppliers - engine parts, transmission components, chassis elements.",
-  },
-  {
-    name: "Medical Devices",
-    description: "Biocompatible materials and cleanroom-compatible manufacturing for medical equipment and instruments.",
-  },
-  {
-    name: "Electronics",
-    description: "Precision enclosures, heat sinks, connectors, and mechanical components for electronic devices.",
-  },
-  {
-    name: "Industrial Equipment",
-    description: "Robust components for machinery, automation equipment, and industrial applications.",
-  },
-  {
-    name: "Defense",
-    description: "Secure manufacturing of defense-grade components with strict quality and confidentiality.",
-  },
-];
 
 const processSteps = [
   { step: "01", title: "Inquiry", description: "Share your requirements and drawings" },
@@ -283,25 +261,6 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* Industry Solutions */}
-      <section className="section-padding bg-secondary">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Industry-Specific Solutions</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Deep expertise across multiple industries with specialized solutions for each sector.
-            </p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-6">
-            {industries.map((industry, index) => (
-              <div key={index} className="bg-card rounded-lg p-6 card-hover border border-border w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                <h3 className="text-xl font-semibold text-foreground mb-3">{industry.name}</h3>
-                <p className="text-muted-foreground text-sm">{industry.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Process */}
       <section className="section-padding bg-background">
