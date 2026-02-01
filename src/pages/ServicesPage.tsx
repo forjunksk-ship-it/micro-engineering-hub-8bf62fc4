@@ -15,10 +15,10 @@ const services = [
     title: "CNC Machining",
     description: "Precision CNC turning and milling services for complex components with tight tolerances. Multi-axis capabilities for intricate geometries.",
     features: [
-      "3, 4, and 5-axis machining",
-      "Tolerance up to ±0.01mm",
-      "Batch sizes from 1 to 10,000+",
-      "Complex geometry capability",
+      "High-speed machining",
+      "Multi-operation capability",
+      "Precision surface finish",
+      "Large part capacity",
     ],
   },
   {
@@ -26,10 +26,10 @@ const services = [
     title: "VMC Machining",
     description: "Vertical Machining Center operations for precision milling, drilling, and tapping. Ideal for prismatic parts and mold components.",
     features: [
-      "High-speed machining",
-      "Multi-operation capability",
-      "Precision surface finish",
-      "Large part capacity",
+      "3, 4, and 5-axis machining",
+      "Tolerance up to ±0.01mm",
+      "Batch sizes from 1 to 10,000+",
+      "Complex geometry capability",
     ],
   },
   {
