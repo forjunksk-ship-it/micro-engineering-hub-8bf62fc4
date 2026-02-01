@@ -225,10 +225,11 @@ const ServicesPage = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                {/* Content */}
                 <div className="p-5 md:p-6 flex flex-col flex-1">
-                  <solution.icon className="h-8 w-8 md:h-10 md:w-10 text-primary mb-3" />
-                  <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-foreground mb-2 md:mb-3">{solution.title}</h3>
+                  <div className="flex items-center gap-2 mb-2 md:mb-3">
+                    <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-foreground">{solution.title}</h3>
+                    <solution.icon className="h-6 w-6 md:h-7 md:w-7 text-primary" />
+                  </div>
                   <p className="text-muted-foreground mb-4 leading-relaxed text-sm">{solution.description}</p>
                   <ul className="space-y-2 mb-4 flex-1">
                     {solution.benefits.map((benefit, idx) => (
