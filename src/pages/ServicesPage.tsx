@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Wrench, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle, Wrench, Sparkles, Lightbulb } from "lucide-react";
 import prototypeImage from "@/assets/prototype-part.png";
 import additionalServicesImage from "@/assets/additional-services.png";
 import capabilityCnc from "@/assets/capability-cnc.jpeg";
@@ -8,6 +8,8 @@ import capabilityVmc from "@/assets/capability-vmc.jpeg";
 import capabilityStamping from "@/assets/capability-stamping.jpeg";
 import iconFabrication from "@/assets/icon-fabrication.png";
 import iconBending from "@/assets/icon-bending.png";
+import customImage from "@/assets/custom-solutions.png";
+import cncImage from "@/assets/cnc-machining.png";
 
 const services = [
   {
@@ -15,10 +17,10 @@ const services = [
     title: "CNC Machining",
     description: "Precision CNC turning and milling services for complex components with tight tolerances. Multi-axis capabilities for intricate geometries.",
     features: [
-      "High-speed machining",
-      "Multi-operation capability",
-      "Precision surface finish",
-      "Large part capacity",
+      "3, 4, and 5-axis machining",
+      "Tolerance up to ±0.01mm",
+      "Batch sizes from 1 to 10,000+",
+      "Complex geometry capability",
     ],
   },
   {
@@ -26,10 +28,10 @@ const services = [
     title: "VMC Machining",
     description: "Vertical Machining Center operations for precision milling, drilling, and tapping. Ideal for prismatic parts and mold components.",
     features: [
-      "3, 4, and 5-axis machining",
-      "Tolerance up to ±0.01mm",
-      "Batch sizes from 1 to 10,000+",
-      "Complex geometry capability",
+      "High-speed machining",
+      "Multi-operation capability",
+      "Precision surface finish",
+      "Large part capacity",
     ],
   },
   {
@@ -75,6 +77,33 @@ const services = [
       "Kitting services",
       "Packaging solutions",
     ],
+  },
+];
+
+const solutions = [
+  {
+    icon: Lightbulb,
+    title: "Design-to-Manufacturing",
+    description: "Complete support from concept to finished product. Our engineering team works with you to optimize designs for manufacturability.",
+    benefits: [
+      "Design for Manufacturing (DFM) analysis",
+      "Material selection guidance",
+      "Cost optimization suggestions",
+      "Prototype validation",
+    ],
+    image: customImage,
+  },
+  {
+    icon: Wrench,
+    title: "Custom Tooling Solutions",
+    description: "In-house tooling development for specialized manufacturing requirements. Jigs, fixtures, and custom dies for your specific needs.",
+    benefits: [
+      "Custom jig and fixture design",
+      "Progressive die development",
+      "Gauges and inspection tools",
+      "Tool maintenance support",
+    ],
+    image: cncImage,
   },
 ];
 
@@ -159,6 +188,56 @@ const ServicesPage = () => {
         </div>
       </section>
 
+      {/* Solutions */}
+      <section className="section-padding bg-secondary">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Tailored Solutions</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              We don't just manufacture parts - we provide complete solutions that address your unique challenges.
+            </p>
+          </div>
+
+          <div className="space-y-12">
+            {solutions.map((solution, index) => (
+              <div
+                key={index}
+                className="bg-card border border-border rounded-xl overflow-hidden shadow-lg"
+              >
+                <div className={`grid lg:grid-cols-2`}>
+                  {/* Image - Always first on mobile */}
+                  <div className={`${index % 2 === 1 ? "lg:order-2" : ""}`}>
+                    <img
+                      src={solution.image}
+                      alt={solution.title}
+                      className="w-full h-48 sm:h-56 md:h-64 lg:h-full object-cover"
+                    />
+                  </div>
+                  {/* Content */}
+                  <div className={`p-6 md:p-8 lg:p-10 flex flex-col justify-center ${index % 2 === 1 ? "lg:order-1" : ""}`}>
+                    <solution.icon className="h-10 w-10 md:h-12 md:w-12 text-primary mb-3 md:mb-4" />
+                    <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-3 md:mb-4">{solution.title}</h3>
+                    <p className="text-muted-foreground mb-4 md:mb-6 leading-relaxed text-sm md:text-base">{solution.description}</p>
+                    <ul className="space-y-2 md:space-y-3 mb-4 md:mb-6">
+                      {solution.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-start gap-2 md:gap-3">
+                          <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-foreground text-sm md:text-base">{benefit}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 w-fit">
+                      <Link to="/contact">
+                        Discuss Your Requirements <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Prototype Services */}
       <section className="section-padding bg-background">
