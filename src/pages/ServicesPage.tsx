@@ -273,7 +273,7 @@ const ServicesPage = () => {
                   <p className="text-muted-foreground text-[9px] sm:text-xs md:text-sm max-w-[70px] sm:max-w-[110px] md:max-w-[140px]">{step.description}</p>
                 </div>
                 {index < processSteps.length - 1 && (
-                  <div className="w-4 sm:w-8 md:w-12 lg:w-20 h-0.5 bg-border -mt-6 sm:-mt-8 rounded-full" />
+                  <div className="w-8 sm:w-12 md:w-20 lg:w-28 h-0.5 bg-primary -mt-6 sm:-mt-8 rounded-full" />
                 )}
               </div>
             ))}
