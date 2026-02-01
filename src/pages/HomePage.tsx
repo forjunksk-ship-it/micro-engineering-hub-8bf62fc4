@@ -270,8 +270,7 @@ const HomePage = () => {
                 Custom Metal & Plastic Parts<br />Manufacturing
               </h1>
               <p className="text-base md:text-lg text-white/90 mb-8 leading-relaxed animate-slide-up" style={{ animationDelay: "0.1s" }}>
-                Your trusted partner for high-quality CNC machining, VMC operations, stamping, and custom fabrication.
-                We deliver prototype to production with <strong>no minimum order quantity</strong>.
+                Your trusted partner for custom metal parts manufacturing, CNC machining, VMC operations, stamping, and custom fabrication. We serve clients across automotive, medical, electronics, defence, machinery, and industrial sectors. From prototype to full production with <strong>no minimum order quantity</strong>.
               </p>
               <div className="flex flex-wrap gap-4 animate-slide-up" style={{ animationDelay: "0.2s" }}>
                 <Button asChild size="lg" variant="cta" className="text-base">
