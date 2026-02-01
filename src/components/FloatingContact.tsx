@@ -1,7 +1,14 @@
 import { Phone } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const FloatingContact = () => {
+  const location = useLocation();
+  
+  // Hide on contact page
+  if (location.pathname === "/contact") {
+    return null;
+  }
+
   return (
     <Link
       to="/contact"
