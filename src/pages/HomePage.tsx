@@ -312,7 +312,7 @@ const HomePage = () => {
               Simple, transparent process from inquiry to delivery.
             </p>
           </div>
-          <div className="flex justify-center items-start">
+          <div className="flex justify-center items-start overflow-hidden">
             {[
               { step: "01", title: "Inquiry", desc: "Share your requirements and drawings" },
               { step: "02", title: "Quotation", desc: "Receive detailed pricing and timeline" },
