@@ -7,7 +7,7 @@ import capabilityCnc from "@/assets/capability-cnc.jpeg";
 import capabilityVmc from "@/assets/capability-vmc.jpeg";
 import capabilityStamping from "@/assets/capability-stamping.jpeg";
 import iconFabrication from "@/assets/icon-fabrication.png";
-import iconBending from "@/assets/icon-bending.png";
+import tubeBendingImage from "@/assets/capability-tube-bending.jpg";
 import customImage from "@/assets/custom-solutions.png";
 import cncImage from "@/assets/cnc-machining.png";
 import customToolingImage from "@/assets/custom-tooling.jpg";
@@ -58,7 +58,7 @@ const services = [
     ],
   },
   {
-    customIcon: iconBending,
+    customIcon: tubeBendingImage,
     title: "Tube Bending",
     description: "Precision tube bending and forming for automotive, furniture, and industrial applications. CNC tube bending for consistent results.",
     features: [
