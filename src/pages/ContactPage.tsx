@@ -69,6 +69,13 @@ const ContactPage = () => {
                 <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90" disabled={isSubmitting}>
                   {isSubmitting ? "Sending..." : "Send Enquiry"}
                 </Button>
+                
+                <p className="text-sm text-muted-foreground text-center mt-4">
+                  For CAD files or drawings, please send directly to{" "}
+                  <a href="mailto:microggn@gmail.com" className="text-primary hover:underline font-medium">
+                    microggn@gmail.com
+                  </a>
+                </p>
               </form>
             </div>
 
