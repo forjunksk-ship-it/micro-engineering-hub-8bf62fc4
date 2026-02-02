@@ -312,23 +312,23 @@ const HomePage = () => {
               Simple, transparent process from inquiry to delivery.
             </p>
           </div>
-          <div className="flex justify-center items-start overflow-hidden">
+          <div className="flex justify-center items-start w-full px-1">
             {[
-              { step: "01", title: "Inquiry", desc: "Share your requirements and drawings" },
-              { step: "02", title: "Quotation", desc: "Receive detailed pricing and timeline" },
-              { step: "03", title: "Production", desc: "Manufacturing with quality checks" },
+              { step: "01", title: "Inquiry", desc: "Share requirements" },
+              { step: "02", title: "Quotation", desc: "Get pricing" },
+              { step: "03", title: "Production", desc: "Quality manufacturing" },
               { step: "04", title: "Delivery", desc: "On-time delivery" },
             ].map((item, index) => (
-              <div key={index} className="flex items-center">
-                <div className="flex flex-col items-center text-center px-2 sm:px-3 md:px-6">
-                  <div className="w-11 h-11 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm sm:text-base md:text-xl font-bold mb-1 sm:mb-2">
+              <div key={index} className="flex items-center flex-shrink-0">
+                <div className="flex flex-col items-center text-center px-1 sm:px-2 md:px-6">
+                  <div className="w-9 h-9 sm:w-11 sm:h-11 md:w-14 md:h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs sm:text-sm md:text-xl font-bold mb-1 sm:mb-2">
                     {item.step}
                   </div>
-                  <h3 className="font-semibold text-foreground text-xs sm:text-sm md:text-base">{item.title}</h3>
-                  <p className="text-muted-foreground text-[9px] sm:text-xs md:text-sm max-w-[70px] sm:max-w-[110px] md:max-w-[140px]">{item.desc}</p>
+                  <h3 className="font-semibold text-foreground text-[10px] sm:text-xs md:text-base">{item.title}</h3>
+                  <p className="text-muted-foreground text-[8px] sm:text-[10px] md:text-sm max-w-[55px] sm:max-w-[80px] md:max-w-[140px] leading-tight">{item.desc}</p>
                 </div>
                 {index < 3 && (
-                  <div className="w-16 sm:w-20 md:w-32 lg:w-40 h-1 bg-gradient-to-r from-transparent via-primary to-transparent -mt-6 sm:-mt-8" />
+                  <div className="w-6 sm:w-14 md:w-32 lg:w-40 h-0.5 sm:h-1 bg-gradient-to-r from-transparent via-primary to-transparent -mt-5 sm:-mt-6 md:-mt-8" />
                 )}
               </div>
             ))}
